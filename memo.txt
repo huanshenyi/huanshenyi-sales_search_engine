@@ -1,0 +1,15 @@
+doda:
+  どんな求人を探しですか->企業名検索可能->jsなしのサイト、特別仕様はない
+  url: https://doda.jp/
+
+indeed:
+  キーワード->企業名検索可能->jsなし、特別仕様なし
+  url: https://jp.indeed.com/
+
+マイナビ転職エージェントサーチ
+  キーワードで検索->jsなし、特別仕様なし
+  url:https://mynavi.agentsearch.jp
+
+エン転職
+ まず職種選んでから->キーワード検索、もしくは一覧->jsなし、特別仕様なし
+ url: https://employment.en-japan.com/s_eigyo/?caroute=0101
