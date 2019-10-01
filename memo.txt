@@ -3,7 +3,7 @@ doda:
   url: https://doda.jp/
 
 indeed:
-  キーワード->企業名検索可能->jsなし、特別仕様なし
+  キーワード->企業名検索可能->jsなし、特別仕様なし,だけど検査内容は非常に雑、関係ないものまで出てくる
   url: https://jp.indeed.com/
 
 マイナビ転職エージェントサーチ
@@ -13,3 +13,13 @@ indeed:
 エン転職
  まず職種選んでから->キーワード検索、もしくは一覧->jsなし、特別仕様なし
  url: https://employment.en-japan.com/s_eigyo/?caroute=0101
+
+wantedly
+  人や会社、...->企業名検索可能->(ssr)
+  url:https://www.wantedly.com/projects
+
+green
+  企業名検索可能->jsなし、特別仕様なし->ただし企業内容にあるキーワードも引っかかる
+  例:ベルフェイスで検索する場合->ベルフェイス使ってるアピールしてる企業の求人も出てきます
+  url:https://www.green-japan.com
+   
