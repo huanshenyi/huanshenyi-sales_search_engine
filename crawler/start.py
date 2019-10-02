@@ -1,3 +1,6 @@
 from scrapy import cmdline
 
-cmdline.execute("scrapy crawl doda".split())
+# doda
+# cmdline.execute("scrapy crawl doda".split())
+# Green
+cmdline.execute("scrapy crawl green".split())
