@@ -3,6 +3,15 @@ import scrapy
 from scrapy.http import Request
 from urllib import parse
 import re
+from datetime import datetime
+
+from utils.get_longitude_and_latitude import get_coordinate
+from crawler.items import EnItem
+
+"""
+enの駅表示が適当すぎたので、
+会社名で経度緯度を探してます
+"""
 
 
 class EnSpider(scrapy.Spider):
@@ -46,11 +55,25 @@ class EnSpider(scrapy.Spider):
                       source                    出所
 
               """
+        en_item = EnItem()
         company_name = response.meta.get("company_name", "")
         company_name = re.sub("（(.*?)）", "", company_name)
         link_url = "https://employment.en-japan.com" + response.meta.get("link_url", "")
         job_name = response.meta.get("job_name", "")
         nearest_station = response.meta.get("nearest_station", "")
+
+        longitude, latitude = get_coordinate(company_name)
+
+        en_item["company_name"] = company_name
+        en_item["link_url"] = link_url
+        en_item["job_name"] = job_name
+        en_item["nearest_station"] = nearest_station
+        en_item["longitude"] = longitude
+        en_item["latitude"] = latitude
+        en_item["source"] = "エン転職"
+        en_item["create_data"] = datetime.now()
+        yield en_item
+
 
 
 

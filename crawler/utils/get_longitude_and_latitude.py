@@ -33,9 +33,16 @@ def get_coordinate(key):
         etree = html.etree
         html = etree.HTML(text.encode('utf-8'))
         # 経度
-        longitude = html.xpath("//span[@class='latlng']/b/text()")[1]
+        try:
+            longitude = html.xpath("//span[@class='latlng']/b/text()")[1]
+        except:
+            longitude = "139.769017"
         # 緯度
-        latitude = html.xpath("//span[@class='latlng']/b/text()")[0]
+        try:
+            latitude = html.xpath("//span[@class='latlng']/b/text()")[0]
+        except:
+            latitude = "35.6804"
+
         return longitude, latitude
 
 

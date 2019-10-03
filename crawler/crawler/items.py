@@ -36,3 +36,27 @@ class GreenItem(scrapy.Item):
     latitude = scrapy.Field()
     source = scrapy.Field()
     create_data = scrapy.Field()
+
+
+# en_crawler_item
+class EnItem(scrapy.Item):
+    company_name = scrapy.Field()
+    job_name = scrapy.Field()
+    link_url = scrapy.Field()
+    nearest_station = scrapy.Field()
+    longitude = scrapy.Field()
+    latitude = scrapy.Field()
+    source = scrapy.Field()
+    create_data = scrapy.Field()
+
+
+# wantedly_crawler_item
+class WantedlyItem(scrapy.Item):
+    company_name = scrapy.Field()
+    job_name = scrapy.Field()
+    link_url = scrapy.Field()
+    nearest_station = scrapy.Field()
+    longitude = scrapy.Field()
+    latitude = scrapy.Field()
+    source = scrapy.Field()
+    create_data = scrapy.Field()

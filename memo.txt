@@ -24,4 +24,5 @@ green
   url:https://www.green-japan.com
 
 経緯度検索
+アクセル多い場合ロックされる(6時間)
 https://www.geocoding.jp/?q=   

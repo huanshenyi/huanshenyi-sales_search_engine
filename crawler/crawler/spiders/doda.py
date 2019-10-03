@@ -34,7 +34,7 @@ class DodaSpider(scrapy.Spider):
                 "job_name": job_name,
                 "nearest_station": nearest_station
             }, callback=self.parse_detail)
-            next_url = response.xpath("//li[@class='txt']/a/@href[1]").get()
+            next_url = response.xpath("//li[@class='btn_r last']/a/@href").get()
             if next_url:
                 yield Request(url=parse.urljoin(response.url, next_url), callback=self.parse)
 
@@ -57,7 +57,12 @@ class DodaSpider(scrapy.Spider):
         link_url = response.meta.get("link_url", "")
         nearest_station = response.meta.get("nearest_station", "")
         nearest_station = nearest_station.split("、")
-        nearest_station = nearest_station[0]
+        try:
+            nearest_station = nearest_station[0]
+            if "駅" not in nearest_station:
+                nearest_station = "東京"
+        except:
+            nearest_station = "東京"
         longitude, latitude = get_coordinate(nearest_station)
 
         dota_item["company_name"] = company_name
