@@ -24,10 +24,15 @@
 """
 import re
 
-# xx = re.sub("[\s+\.\!\/_,$%^*(+\"\')]+|[+——()★?転勤なし／【】本社：“”■！，。？、~@#￥%……&*（）]+", "",
-#             "本社または第2工場（東京都杉並区）★転勤なし。自転車通勤OK！第2工場は昨年完成したキレイな工場！")
-#
+# y = re.compile("【(.*?)】")
+# # xx = re.sub("【(.*?)】", "", "株式会社ピーエイ 【東証二部】")
+# xx = re.sub("【(.*?)】|\（(.*?)\）", "", "ＧＭＯ　ＴＥＣＨ株式会社 【マザーズ】 (GMOインターネットグループ)")
+# # xx = re.sub("[\s+\.\!\/_,$%^*(+\"\')]+|[+——()★?転勤なし／【】本社：“”■！，。？、~@#￥%……&*（）]+", "",
+# #             "本社または第2工場（東京都杉並区）★転勤なし。自転車通勤OK！第2工場は昨年完成したキレイな工場！")
 # print(xx)
+xx = "ＧＭＯ　ＴＥＣＨ株式会社  (GMOインターネットグループ)"
+y = re.sub("　", "", xx)
+print(y)
 
 # url = "https://www.wantedly.com/projects/308370?filter_params%5Bauthorized%5D=true&filter_params%5Bcategory%5D=normal&filter_params%5Bcountry%5D=japan&filter_params%5Boccupation_types%5D%5B%5D=sales&filter_type=mixed&list=2&page=1"
 #
@@ -36,6 +41,6 @@ import re
 # x = re.match(y,url)
 # print(x.group())
 
-x = "東京都港区海岸3-3-18 芝浦日新ビル6階"
-x = re.sub(" ",'',x)
-print(x)
+# x = "東京都港区海岸3-3-18 芝浦日新ビル6階"
+# x = re.sub(" ",'',x)
+# print(x)

@@ -3,6 +3,7 @@ import scrapy
 from urllib import parse
 from scrapy.http import Request
 from datetime import datetime
+import re
 
 from utils.get_longitude_and_latitude import get_coordinate
 from crawler.items import DodaItem
@@ -53,6 +54,7 @@ class DodaSpider(scrapy.Spider):
         dota_item = DodaItem()
 
         company_name = response.meta.get("company_name", "")
+        company_name = re.sub("【(.*?)】|\（(.*?)\）", "", company_name)
         job_name = response.meta.get("job_name", "")
         link_url = response.meta.get("link_url", "")
         nearest_station = response.meta.get("nearest_station", "")
