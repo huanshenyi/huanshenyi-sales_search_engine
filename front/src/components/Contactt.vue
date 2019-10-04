@@ -2,7 +2,9 @@
     <div class="contactt">
         <Layout>
             <div slot="container">
-                <h1>This is an contactt page</h1>
+                <div ref="myChart" :style="{width: '100%', height: '100%'}">
+                    kokomap
+                </div>
             </div>
         </Layout>
     </div>

@@ -70,6 +70,10 @@ export default class Home extends Vue {
       line-height: 64px;
       height: 64px;
     }
+    .container{
+      padding: 10px;
+      height: 100%;
+    }
     .system-info {
       text-align: left;
       .logo {

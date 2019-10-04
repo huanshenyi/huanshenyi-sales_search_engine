@@ -140,11 +140,11 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = "users.UserProfile"
 
-# #单个配置
+#单个配置
 # CORS_ORIGIN_WHITELIST =(
 #    ' 域名',
 # )
-# #正则配置:
+#正则配置:
 # CORS_ORIGIN_REGEX_WHITELIST =(r'^(https?://)?（\w+\.)?jim\.com $',)
 
 CORS_ORIGIN_ALLOW_ALL = True

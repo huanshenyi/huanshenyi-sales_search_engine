@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c932e23-0e2e-41cc-9653-654b041846c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crawler/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/public/js/bmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/src/utils/http.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/crawler/spiders/doda.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/crawler/spiders/doda.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/Contactt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/Contactt.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/views/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/views/Layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/vue.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="143" column="26" lean-forward="true" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
+            <state relative-caret-position="225">
+              <caret line="146" selection-start-line="146" selection-end-line="146" />
             </state>
           </provider>
         </entry>
@@ -64,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-62">
+            <state relative-caret-position="45">
               <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
@@ -94,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawler/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
+            <state>
               <folding>
                 <element signature="e#1#34#0" expanded="true" />
               </folding>
@@ -108,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
+            <state relative-caret-position="90">
               <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
             </state>
           </provider>
@@ -239,24 +245,23 @@
       <updated>1569896940106</updated>
       <workItem from="1569896941968" duration="313000" />
       <workItem from="1570006527821" duration="2562000" />
-      <workItem from="1570085865058" duration="6873000" />
+      <workItem from="1570085865058" duration="7683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9748000" />
+    <option name="totallyTimeSpent" value="10558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-113" y="-897" width="1440" height="823" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19670959" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17167382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="aws.explorer" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.56908345" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42270863" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,18 +306,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/urls.py">
+    <entry file="file://$PROJECT_DIR$/backend/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        <state relative-caret-position="225">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/views.py">
+    <entry file="file://$PROJECT_DIR$/crawler/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
+        <state relative-caret-position="45">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding>
-            <element signature="e#1#34#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -327,27 +340,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/serializer.py">
+    <entry file="file://$PROJECT_DIR$/backend/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="90">
+          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#1#34#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="143" column="26" lean-forward="true" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
         </state>
       </provider>
     </entry>

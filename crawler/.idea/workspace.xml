@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c2078bf-25a9-4a99-b7f5-90eaeb16b3fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../backend/crawler/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/public/js/bmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/src/utils/http.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/crawler/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/crawler/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/spiders/doda.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/spiders/doda.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/Contactt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/Contactt.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/views/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/views/Layout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front/vue.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawler/spiders/doda.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="55" column="60" lean-forward="true" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+            <state relative-caret-position="365">
+              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -295,16 +301,15 @@
       <workItem from="1569994640080" duration="7535000" />
       <workItem from="1570009201303" duration="223000" />
       <workItem from="1570010763965" duration="2211000" />
-      <workItem from="1570085916234" duration="10322000" />
+      <workItem from="1570085916234" duration="10918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45813000" />
+    <option name="totallyTimeSpent" value="46409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="484" y="-976" width="1440" height="823" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -460,8 +465,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crawler/spiders/doda.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="55" column="60" lean-forward="true" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
+        <state relative-caret-position="365">
+          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>

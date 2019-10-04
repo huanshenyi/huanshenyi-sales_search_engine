@@ -1,4 +1,5 @@
 module.exports = {
+    externals: {    'BMap': 'BMap'  },
     devServer: {
         open:true,
         host:"localhost",
