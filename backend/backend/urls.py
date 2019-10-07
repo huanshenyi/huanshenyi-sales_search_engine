@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
+from django.conf.urls import include, url
+from rest_framework.documentation import include_docs_urls
 
 from rest_framework.routers import DefaultRouter
 
@@ -30,5 +31,7 @@ router.register("mapdata", CrawlerMapDataViewSet, base_name="mapdata")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # drfのドキュメント
+    url(r'docs/', include_docs_urls(title="ドキュメント")),
     path('', include(router.urls)),
 ]

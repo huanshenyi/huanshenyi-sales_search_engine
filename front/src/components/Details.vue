@@ -28,7 +28,7 @@
                                     <span>green</span>
                                 </div>
                                 <div v-for="o in 4" :key="o" class="text item">
-                                    {{'列表内容 ' + o }}
+                                    {{'内容リスト ' + o }}
                                 </div>
                             </el-card>
                         </div></el-col>
@@ -38,7 +38,7 @@
                                     <span>wantedly</span>
                                 </div>
                                 <div v-for="o in 4" :key="o" class="text item">
-                                    {{'列表内容 ' + o }}
+                                    {{'内容リスト ' + o }}
                                 </div>
                             </el-card>
                         </div></el-col>
@@ -48,7 +48,7 @@
                                     <span>エン転職</span>
                                 </div>
                                 <div v-for="o in 4" :key="o" class="text item">
-                                    {{'列表内容 ' + o }}
+                                    {{'内容リスト ' + o }}
                                 </div>
                             </el-card>
                         </div></el-col>
@@ -72,7 +72,7 @@
                                     <span>indeed</span>
                                 </div>
                                 <div v-for="o in 4" :key="o" class="text item">
-                                    {{'列表内容 ' + o }}
+                                    {{'内容リスト ' + o }}
                                 </div>
                             </el-card>
                         </div></el-col>

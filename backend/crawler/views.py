@@ -18,7 +18,7 @@ class CrawlerDataPagination(PageNumberPagination):
     max_page_size = 200
 
 
-class CrawlerDataViewSet(CacheResponseMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
+class CrawlerDataViewSet(CacheResponseMixin, mixins.ListModelMixin, mixins.DestroyModelMixin, viewsets.GenericViewSet):
     """
     検索データ用
     """

@@ -31,7 +31,7 @@
   .about {
     width: 100%;
     height: 100%;
-    background: url("https://s3-ap-northeast-1.amazonaws.com/petpedia/upload_by_admin/hari-01_800.jpg") no-repeat;
+    /*background: url("https://s3-ap-northeast-1.amazonaws.com/petpedia/upload_by_admin/hari-01_800.jpg") no-repeat;*/
     background-size: 100% 100%;
     .about-body {
       height: 100%;

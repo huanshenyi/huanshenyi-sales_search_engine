@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c2078bf-25a9-4a99-b7f5-90eaeb16b3fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../front/src/components/Details.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/crawler/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/crawler/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/crawler/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/crawler/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/views/Layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/views/Layout.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,20 +71,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
+            <state relative-caret-position="24">
               <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawler/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+            <state relative-caret-position="144">
+              <caret line="119" column="16" lean-forward="true" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
               <folding>
                 <element signature="e#169#195#0" expanded="true" />
               </folding>
@@ -149,8 +136,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="441" />
-    <option name="y" value="-1014" />
+    <option name="x" value="361" />
+    <option name="y" value="-1015" />
     <option name="width" value="1440" />
     <option name="height" value="823" />
   </component>
@@ -304,18 +291,18 @@
       <workItem from="1569994640080" duration="7535000" />
       <workItem from="1570009201303" duration="223000" />
       <workItem from="1570010763965" duration="2211000" />
-      <workItem from="1570085916234" duration="23568000" />
+      <workItem from="1570085916234" duration="24010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59059000" />
+    <option name="totallyTimeSpent" value="59501000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="441" y="-1014" width="1440" height="823" extended-state="0" />
+    <frame x="361" y="-1015" width="1440" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="aws.explorer" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -330,7 +317,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5362517" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.5362517" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -481,20 +468,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/middlewares.py">
+    <entry file="file://$PROJECT_DIR$/crawler/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
-          <folding>
-            <element signature="e#169#195#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="24">
+          <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/settings.py">
+    <entry file="file://$PROJECT_DIR$/crawler/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
+        <state relative-caret-position="144">
+          <caret line="119" column="16" lean-forward="true" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+          <folding>
+            <element signature="e#169#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

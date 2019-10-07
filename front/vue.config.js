@@ -1,8 +1,8 @@
 module.exports = {
-    externals: {    'BMap': 'BMap'  },
     devServer: {
         open:true,
-        host:"localhost",
+        host:"0.0.0.0",
+        disableHostCheck: true,
         port: '3000',
         https:false,
         hotOnly:false,
