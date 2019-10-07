@@ -19,12 +19,14 @@ from django.conf.urls import include
 
 from rest_framework.routers import DefaultRouter
 
-from crawler.views import CrawlerDataViewSet
+from crawler.views import CrawlerDataViewSet, CrawlerMapDataViewSet
 
 router = DefaultRouter()
 
-# クローラーデータ一覧
+"""クローラーデータ一覧"""
 router.register("dates", CrawlerDataViewSet, base_name="dates")
+"""マップ表示データ用"""
+router.register("mapdata", CrawlerMapDataViewSet, base_name="mapdata")
 
 urlpatterns = [
     path('admin/', admin.site.urls),

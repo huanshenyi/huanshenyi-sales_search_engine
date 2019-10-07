@@ -5,8 +5,8 @@
         <div class="layout-header">
           <el-row>
             <el-col :xs="10" :sm="12" :md="14" :lg="16" :xl="18">
-              <div class="system-info">
-                <img class="logo" src="@/assets/logo.png" alt="">
+              <div class="system-info" @click="toHome">
+                <img class="logo" src="@/assets/logo.png" alt="" @click="toHome">
                 <span class="title">Crawler</span>
               </div>
             </el-col>
@@ -14,7 +14,7 @@
               <el-dropdown @command="userCommand" class="system-user">
                    <span class="userinfo-inner">
                        <img :src="require('@/assets/logo.png')" alt="">
-                       暫定
+                       メニュー
                    </span>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item command="about">ABOUT</el-dropdown-item>
@@ -31,7 +31,8 @@
         </div>
       </el-main>
       <el-footer>
-        footer
+        <div class="footer">
+        </div>
       </el-footer>
     </el-container>
   </div>
@@ -54,6 +55,9 @@ export default class Home extends Vue {
       this.$router.push("/contactt")
     }
   };
+  toHome():void{
+    (this as any).$router.push("/")
+  }
   created(){
     // console.log(this.getUser)
   };
@@ -109,6 +113,13 @@ export default class Home extends Vue {
           float: right;
         }
       }
+    }
+    .footer{
+      width: 100%;
+      padding: 40px 150px;
+      box-sizing: border-box;
+      height: 340px;
+      bottom: 0;
     }
   }
 

@@ -7,6 +7,9 @@
 
 from scrapy import signals
 from fake_useragent import UserAgent
+from selenium import webdriver
+import time
+from scrapy.http import HtmlResponse
 
 
 class CrawlerSpiderMiddleware(object):
@@ -106,16 +109,42 @@ class CrawlerDownloaderMiddleware(object):
 
 # ランダムユーザーエイジェット
 class RandomUserAgentMiddleware(object):
-
+    """
+     ランダムユーザーエイジェット
+    """
     def __init__(self, crawler):
         super(RandomUserAgentMiddleware, self).__init__()
         self.ua = UserAgent()
+        self.ua_type = crawler.settings.get("RANDOM_UA_TYPE", "random")
 
-
-    #ランダムユーザーエイジェット
     @classmethod
     def from_crawler(cls, crawler):
         return cls(crawler)
 
     def process_request(self, request, spider):
-        request.headers.setdefault('User-Agent', self.ua.random)
+        def get_ua():
+            return getattr(self.ua, self.ua_type)
+        request.headers.setdefault('User-Agent', get_ua())
+
+
+class JSPageMiddleware(object):
+    """
+    一部js pageに使用する
+    _init_を crawlerに持っていく
+    """
+    from scrapy.xlib.pydispatch import dispatcher
+    from scrapy import signals
+    # path = ""
+    # def __init__(self):
+    #     self.browser = webdriver.Chrome(executable_path=self.path)
+    #     super(crawlerのclass名, self).__init__()
+    #     dispatcher.connect(self.spider_closed, signals.spider_closed)
+    # def spider_closed(self, spider):
+    #     self.browser
+
+
+    def process_response(self, request, response, spider):
+        if spider.name == "js必要なcrawler名前":
+             spider.browser.get(request.url)
+             time.sleep(3)
+             return HtmlResponse(url=spider.current_url, body=spider.page_source, encoding="utf-8", request=request)

@@ -3,12 +3,13 @@
         <div slot="container">
             <div class="home">
                 <div class="search-box">
-                    <el-input size="small" v-model="searchVal" placeholder="企業名を入力下さい"></el-input>
+                    <el-input size="small" v-model="searchVal" placeholder="企業名を入力して下さい"></el-input>
                     <el-button size="small" type="primary">
                         <i class="el-icon-search" @click="handleSearch">検索</i>
                     </el-button>
+                    現在総：{{this.count}}件
                 </div>
-                <div ref="myChart" :style="{width: '100%', height: '600px'}">
+                <div ref="myChart" :style="{width: '100%', height: '700px'}">
                 </div>
             </div>
         </div>
@@ -16,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Provide } from "vue-property-decorator"
+import { Component, Vue, Provide} from "vue-property-decorator"
 import Layout from "@/views/Layout.vue"
 import echarts from 'echarts'
 @Component({
@@ -26,29 +27,49 @@ import echarts from 'echarts'
 })
 export default class Home extends Vue{
     @Provide() searchVal:string = "";
+    @Provide() count:number = 0;
     @Provide() crawlerData:any = [];
     @Provide() myChart:any = "";
     @Provide() data = new Date();
-    @Provide() center:any = {lng: 109.45744048529967, lat: 36.49771311230842};
-    @Provide() zoom:number = 5;
+    //[{name: '赤峰', value: 16},{name: '赤峰', value: 16}]
+    @Provide() datas:any = [];
+    //{'海门':[121.15,31.89],'海门':[121.15,31.89]}
+    @Provide() geoCoordMap:any = {};
     created(){
        this.handelGetData()
     }
     mounted(){
-        this.drawLine()
+        setTimeout(()=>{
+            this.drawLine()
+        },500)
+    }
+    handelGetData(){
+        (this as any).$axios.get("http://127.0.0.1:8000/mapdata/").then((res:any)=>{
+            this.crawlerData = res.data.results;
+            this.count = res.data.count;
+            this.crawlerData.forEach((data:any)=>{
+                this.geoCoordMap[`${data.company_name}`] = [Number(data.longitude), Number(data.latitude)];
+                this.datas.push({name:data.company_name,value:1})
+            });
+        })
+    }
+    handleSearch(){
+            (this as any).$router.push({path: "/details", query:{ searchVal: this.searchVal }})
+    }
+    convertData (data:any){
+        var res = [];
+        for (var i = 0; i < data.length; i++) {
+            var geoCoord = this.geoCoordMap[data[i].name];
+            if (geoCoord) {
+                res.push({
+                    name: data[i].name,
+                    value: geoCoord.concat(data[i].value)
+                });
+            }
+        }
+        return res;
     }
 
-    handelGetData():void{
-        (this as any).$axios.get("http://127.0.0.1:8000/dates/").then((res:any)=>{
-            console.log(res.data);
-            this.crawlerData = res.data;
-        })
-    }
-    handleSearch():void{
-        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?company_name=${this.searchVal}`).then((res:any)=>{
-            console.log(res.data);
-        })
-    }
     drawLine():void{
         this.myChart = echarts.init(this.$refs.myChart as HTMLCanvasElement);
         this.myChart.setOption({
@@ -65,7 +86,7 @@ export default class Home extends Vue{
             },
             bmap: {
                 center: [139.769017, 35.6804],
-                zoom: 5,
+                zoom: 6,
                 roam: true,
                 mapStyle: {
                     styleJson: [
@@ -200,6 +221,28 @@ export default class Home extends Vue{
                     ]
                 }
             },
+            series : [
+                {
+                    name: '求人会社',
+                    type: 'scatter',
+                    coordinateSystem: 'bmap',
+                    data: this.convertData(this.datas),
+                    label: {
+                        normal: {
+                            formatter: '{b}',
+                            position: 'right',
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#ddb926'
+                        }
+                    }
+                },]
         })
     }
 }

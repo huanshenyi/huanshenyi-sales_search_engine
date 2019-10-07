@@ -136,6 +136,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+REST_FRAMEWORK = {
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework.authentication.BasicAuthentication',
+    #     'rest_framework.authentication.SessionAuthentication',
+    #     'rest_framework.authentication.TokenAuthentication',
+    # ],
+    # アクセススピード制限
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle', # 匿名ユーザーの場合 ipで判断
+        'rest_framework.throttling.UserRateThrottle' # tokenのセッションで判断
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '30/minute',
+        'user': '40/minute'
+    }
+}
+
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = "users.UserProfile"
@@ -148,3 +165,8 @@ AUTH_USER_MODEL = "users.UserProfile"
 # CORS_ORIGIN_REGEX_WHITELIST =(r'^(https?://)?（\w+\.)?jim\.com $',)
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+# DRF extensions timeout
+REST_FRAMEWORK_EXTENSIONS = {
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': 8
+}

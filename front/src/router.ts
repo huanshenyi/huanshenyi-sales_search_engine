@@ -22,6 +22,11 @@ export default new Router({
       path: "/Contactt",
       name: "Contactt",
       component: () => import('./components/Contactt.vue')
+    },
+    {
+      path: "/details",
+      name: "details",
+      component: () => import('./components/Details.vue')
     }
   ]
 })
