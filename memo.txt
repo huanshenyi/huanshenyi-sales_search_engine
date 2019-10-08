@@ -23,6 +23,14 @@ green
   例:ベルフェイスで検索する場合->ベルフェイス使ってるアピールしてる企業の求人も出てきます
   url:https://www.green-japan.com
 
+リクナビnext
+  職種検索対応->jsなし->特別仕様なし
+  url: https://next.rikunabi.com/rnc/docs/cp_s00700.jsp?leadtc=n_ichiran_panel_submit_btn&__m=1570519392127-2472544138083847959
+
+type.js
+ 職種検索対応可能->特別仕様なし
+ url: https://type.jp/job/search.do?pathway=4&job3IdList=83&job3IdList=84&job3IdList=85&job3IdList=86&job3IdList=87&job3IdList=88&job3IdList=89&job3IdList=90&job3IdList=91&job3IdList=92&job3IdList=93&job3IdList=94&job3IdList=95&salaryId=
+
 経緯度検索
 アクセル多い場合ロックされる(6時間)
 https://www.geocoding.jp/?q=   
