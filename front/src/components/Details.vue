@@ -14,11 +14,26 @@
                             <div class="grid-content bg-purple">
                                 <el-card class="box-card">
                                     <div slot="header" class="clearfix">
-                                        <span>DODA</span>
+                                        <span>DODA({{GetDodaData.length}}件)</span>
                                     </div>
-                                    <div v-for="(item, key) in GetDodaData" :key="item.id" class="text item">
+                                    <div v-for="(item, key) in GetDodaData" :key="item.id" class="text item" v-if="key<10">
                                         <a :href="item.link_url">{{item.job_name}}</a>
                                     </div>
+                                    <el-button type="text" @click="dialogVisible = true" v-show="GetDodaData.length>10">
+                                        さらに表示
+                                    </el-button>
+                                    <el-dialog
+                                            title="DODA"
+                                            :visible.sync="dialogVisible"
+                                            width="30%"
+                                            :before-close="handleClose">
+                                        <div v-for="(item, key) in GetDodaData" :key="item.id" class="text item">
+                                            <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                                        </div>
+                                        <span slot="footer" class="dialog-footer">
+                                         <el-button type="primary" @click="dialogVisible = false">ok</el-button>
+                                        </span>
+                                    </el-dialog>
                                 </el-card>
                         </div>
                         </el-col>
@@ -60,8 +75,8 @@
                                     <div slot="header" class="clearfix">
                                         <span>マイナビ転職エージェントサーチ</span>
                                     </div>
-                                    <div v-for="(item, key) in GetDodaData" :key="item.id" class="text item">
-                                        <a :href="item.link_url">{{item.job_name}}</a>
+                                    <div v-for="o in 4" :key="o" class="text item">
+                                        {{'内容リスト ' + o }}
                                     </div>
                                 </el-card>
                             </div>
@@ -92,6 +107,7 @@ import Layout from "@/views/Layout.vue"
     }
 })
 export default class Details extends Vue{
+    @Provide() dialogVisible:boolean = false;
     @Provide() searchVal:string = "";
     @Provide() loading: boolean = false;
     @Provide() searchData:any = [];
