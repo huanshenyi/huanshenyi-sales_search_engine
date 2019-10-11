@@ -25,14 +25,27 @@
 import re
 
 # y = re.compile("【(.*?)】")
-# # xx = re.sub("【(.*?)】", "", "株式会社ピーエイ 【東証二部】")
+# xx = re.sub("【(.*?)】", "", "株式会社IDOM【東証一部上場企業】")
+# print(xx)
+
+x = "株式会社プロディライト　 東京支店"
+y = re.sub("\s*","", x)
+print(y)
+# y = re.sub("\D*", "", "年収：400～700万円")
+# y = re.compile("\d*～\d*")
+# x = re.search(y, "年収：400～700万円")
+# x = x.group()
+# xx = x.split("～")
+# print(xx)
+
+
 # xx = re.sub("【(.*?)】|\（(.*?)\）", "", "ＧＭＯ　ＴＥＣＨ株式会社 【マザーズ】 (GMOインターネットグループ)")
 # # xx = re.sub("[\s+\.\!\/_,$%^*(+\"\')]+|[+——()★?転勤なし／【】本社：“”■！，。？、~@#￥%……&*（）]+", "",
 # #             "本社または第2工場（東京都杉並区）★転勤なし。自転車通勤OK！第2工場は昨年完成したキレイな工場！")
 # print(xx)
-xx = "ＧＭＯ　ＴＥＣＨ株式会社  (GMOインターネットグループ)"
-y = re.sub("　", "", xx)
-print(y)
+# xx = "ＧＭＯ　ＴＥＣＨ株式会社  (GMOインターネットグループ)"
+# y = re.sub("　", "", xx)
+# print(y)
 
 # url = "https://www.wantedly.com/projects/308370?filter_params%5Bauthorized%5D=true&filter_params%5Bcategory%5D=normal&filter_params%5Bcountry%5D=japan&filter_params%5Boccupation_types%5D%5B%5D=sales&filter_type=mixed&list=2&page=1"
 #

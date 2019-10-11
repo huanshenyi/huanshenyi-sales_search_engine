@@ -46,6 +46,7 @@ class WantedlySpider(scrapy.Spider):
                       longitude                 経度
                       latitude                  緯度
                       source                    出所
+                      occupation                職種
                       create_data　             クロリングした時間　
 
               """

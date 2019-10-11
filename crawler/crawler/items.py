@@ -60,3 +60,18 @@ class WantedlyItem(scrapy.Item):
     latitude = scrapy.Field()
     source = scrapy.Field()
     create_data = scrapy.Field()
+
+
+# type_crawler_item
+class TypeItem(scrapy.Item):
+    company_name = scrapy.Field()
+    job_name = scrapy.Field()
+    link_url = scrapy.Field()
+    nearest_station = scrapy.Field()
+    longitude = scrapy.Field()
+    latitude = scrapy.Field()
+    annual_income_min = scrapy.Field()
+    annual_income_max = scrapy.Field()
+    occupation = scrapy.Field()
+    source = scrapy.Field()
+    create_data = scrapy.Field()
