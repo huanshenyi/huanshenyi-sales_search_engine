@@ -9,12 +9,14 @@ import sqlite3
 # データベースファイルのパス
 dbpath = '/Users/tianxiaoyi/spider/sales_search_engine/backend/db.sqlite3'
 
+
 class CrawlerPipeline(object):
     def process_item(self, item, spider):
         return item
 
 
 class SqlitePipeline(object):
+    """ローカル保存用"""
     def __init__(self):
         self.connection = sqlite3.connect(dbpath)
         self.cursor = self.connection.cursor()
@@ -32,3 +34,8 @@ class SqlitePipeline(object):
 
     def close_spider(self, spider):
         self.connection.close()
+
+
+class RdsPipeline(object):
+    """RDS用"""
+    pass

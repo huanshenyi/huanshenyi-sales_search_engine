@@ -73,6 +73,9 @@ class DodaSpider(scrapy.Spider):
         dota_item["nearest_station"] = nearest_station
         dota_item["longitude"] = longitude
         dota_item["latitude"] = latitude
+        # dota_item["annual_income_min"] = annual_income_min
+        # dota_item["annual_income_max"] = annual_income_max
+        dota_item["occupation"] = "営業"
         dota_item["source"] = "doda"
         dota_item["create_data"] = datetime.now()
         yield dota_item

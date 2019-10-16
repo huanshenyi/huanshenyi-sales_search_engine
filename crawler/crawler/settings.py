@@ -20,7 +20,6 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
-
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -43,7 +42,7 @@ DEFAULT_REQUEST_HEADERS = {
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
   'Accept-Language': 'ja,en-US;q=0.9,en;q=0.8',
   'cache-control': 'no-cache',
-  'sec-ch-ua': 'Google Chrome 77'
+  'sec-ch-ua': 'Google Chrome 77',
 }
 
 # Enable or disable spider middlewares
@@ -96,3 +95,5 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 RANDOM_UA_TYPE = "chrome"
+
+HTTPERROR_ALLOWED_CODES = [302]

@@ -22,6 +22,9 @@ class DodaItem(scrapy.Item):
     nearest_station = scrapy.Field()
     longitude = scrapy.Field()
     latitude = scrapy.Field()
+    annual_income_min = scrapy.Field()
+    annual_income_max = scrapy.Field()
+    occupation = scrapy.Field()
     source = scrapy.Field()
     create_data = scrapy.Field()
 
@@ -58,7 +61,11 @@ class WantedlyItem(scrapy.Item):
     nearest_station = scrapy.Field()
     longitude = scrapy.Field()
     latitude = scrapy.Field()
+    annual_income_min = scrapy.Field()
+    annual_income_max = scrapy.Field()
+    occupation = scrapy.Field()
     source = scrapy.Field()
+    published_time = scrapy.Field()
     create_data = scrapy.Field()
 
 
@@ -74,4 +81,21 @@ class TypeItem(scrapy.Item):
     annual_income_max = scrapy.Field()
     occupation = scrapy.Field()
     source = scrapy.Field()
+    published_time = scrapy.Field()
+    create_data = scrapy.Field()
+
+
+# リクナビネクストのitem
+class NextRikuabiItem(scrapy.Item):
+    company_name = scrapy.Field()
+    job_name = scrapy.Field()
+    link_url = scrapy.Field()
+    nearest_station = scrapy.Field()
+    longitude = scrapy.Field()
+    latitude = scrapy.Field()
+    annual_income_min = scrapy.Field()
+    annual_income_max = scrapy.Field()
+    occupation = scrapy.Field()
+    source = scrapy.Field()
+    published_time = scrapy.Field()
     create_data = scrapy.Field()

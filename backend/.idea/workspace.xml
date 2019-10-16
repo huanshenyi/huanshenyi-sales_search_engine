@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c932e23-0e2e-41cc-9653-654b041846c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../memo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../営業募集検索エンジン.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../営業募集検索エンジン.xmind" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,11 +130,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="149" />
     <option name="y" value="23" />
     <option name="width" value="1120" />
-    <option name="height" value="811" />
+    <option name="height" value="808" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -234,15 +232,15 @@
       <workItem from="1570006527821" duration="2562000" />
       <workItem from="1570085865058" duration="15926000" />
       <workItem from="1570413447748" duration="3575000" />
-      <workItem from="1570499976401" duration="1007000" />
+      <workItem from="1570499976401" duration="1014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23383000" />
+    <option name="totallyTimeSpent" value="23390000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="149" y="23" width="1120" height="811" extended-state="1" />
+    <frame x="149" y="23" width="1120" height="808" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22912802" />
@@ -251,7 +249,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42837274" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42837274" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -269,7 +267,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.3297568" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.36920223" />
+      <window_info anchor="right" id="Database" order="5" weight="0.36920223" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">

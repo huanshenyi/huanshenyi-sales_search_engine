@@ -12,7 +12,10 @@ from scrapy import cmdline
 # cmdline.execute("scrapy crawl en".split())
 
 # wantedly
-#cmdline.execute("scrapy crawl wantedly".split())
+cmdline.execute("scrapy crawl wantedly".split())
 
-#start
-cmdline.execute("scrapy crawl type".split())
+# type
+# cmdline.execute("scrapy crawl type".split())
+
+#next_rikunabi
+#cmdline.execute("scrapy crawl next_rikunabi".split())

@@ -2,3 +2,9 @@ doda ok
 green ok
 en ok
 wantedly ok
+
+
+
+
+type 完成
+next_rikunabi 完成

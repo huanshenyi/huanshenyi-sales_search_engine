@@ -10,6 +10,9 @@ from pprint import pprint
 
 
 class TypeSpider(scrapy.Spider):
+    """
+    すでに営業とカスタマ入ってる 量は600ほど
+    """
     name = 'type'
     # allowed_domains = ['type.jp']
     start_urls = ['https://type.jp/job/search.do?pathway=4&job3IdList=83&job3IdList=84&job3IdList=85&job3IdList=86&job3IdList=87&job3IdList=88&job3IdList=89&job3IdList=90&job3IdList=91&job3IdList=92&job3IdList=93&job3IdList=94&job3IdList=95&salaryId=']
@@ -17,6 +20,8 @@ class TypeSpider(scrapy.Spider):
     def parse(self, response):
         company_names = response.xpath("//p[@class='company size-14px']/span/text()").getall()
         company_names = company_names[1:]
+        published_times = response.xpath("//p[@class='end-date']/text()").getall()
+        published_times = published_times[1:]
         job_names = response.xpath("//h2[@class='title']/a/text()").getall()
         job_names = job_names[1:]
         link_urls = response.xpath("//h2[@class='title']/a/@href").getall()
@@ -24,12 +29,13 @@ class TypeSpider(scrapy.Spider):
         link_urls = map(lambda x: re.sub("message", "detail", x), link_urls)
         nearest_stations = response.xpath("//table[@class='mod-table']//tr[3]/td/text()").getall()
         nearest_stations = nearest_stations[1:]
-        for company_name, link_url, job_name, nearest_station in zip(company_names, link_urls, job_names, nearest_stations):
+        for company_name, link_url, job_name, nearest_station, published_time in zip(company_names, link_urls, job_names, nearest_stations, published_times):
             yield Request(url=parse.urljoin(response.url, link_url), meta={
                 "company_name": company_name,
                 "link_url": link_url,
                 "job_name": job_name,
                 "nearest_station": nearest_station,
+                "published_time": published_time
             }, callback=self.parse_detail)
             next_url = response.xpath("//p[@class='next active']/a/@href").get()
             if next_url:
@@ -47,6 +53,7 @@ class TypeSpider(scrapy.Spider):
                       occupation                職種
                       annual_income_min         年収min
                       annual_income_max         年収max
+                      published_time            サイト内での掲載時間
                       create_data　             クロリングした時間　
 
               """
@@ -69,14 +76,17 @@ class TypeSpider(scrapy.Spider):
         else:
             annual_income_min = ""
             annual_income_max = ""
+        published_time = response.meta.get("published_time", "")
+        published_time = published_time.strip()
 
-        # print(company_name,link_url,job_name,nearest_station,annual_income_min,annual_income_max)
+        # print(company_name, link_url, job_name, nearest_station, annual_income_min, annual_income_max)
 
         longitude, latitude = get_coordinate(company_name)
 
         type_item = TypeItem()
         type_item["company_name"] = company_name
         type_item["link_url"] = link_url
+        type_item["nearest_station"] = nearest_station
         type_item["job_name"] = job_name
         type_item["annual_income_min"] = annual_income_min
         type_item["annual_income_max"] = annual_income_max
@@ -84,6 +94,7 @@ class TypeSpider(scrapy.Spider):
         type_item["latitude"] = latitude
         type_item["occupation"] = "営業"
         type_item["source"] = "type"
+        type_item["published_time"] = published_time
         type_item["create_data"] = datetime.now()
         yield type_item
 
