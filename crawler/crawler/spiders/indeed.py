@@ -9,5 +9,8 @@ class IndeedSpider(scrapy.Spider):
     # allowed_domains = ['https://jp.indeed.com']
     start_urls = ['https://jp.indeed.com/営業関連の求人']
 
+    def parse(self, response):
+        print(response.body)
+
 
 

@@ -105,20 +105,12 @@ class NextRikunabiSpider(scrapy.Spider):
         """サイト内での掲載時間"""
         published_time = response.xpath("//p[@class='rnn-inlineBlock rnn-offerInfoHeader__date rnn-textM']/text()").get()
 
+        """検証用"""
         # print(f"company_name:{company_name} \n link_url:{link_url}"
         #       f" \n job_name:{job_name} \n nearest_station:{nearest_station}"
         #       f"\n annual_income_min:{annual_income_min} \n annual_income_max:{annual_income_max} \n"
         #       f"published_time:{published_time}")
-        """
-        company_name:PayPay株式会社（株主：ソフトバンクグループ株式会社、ソフトバンク株式会社、ヤフー株式会社） 
-        link_url:/company/cmi3845848001/nx1_rq0017845176/?fr=cp_s00700&list_disp_no=1&leadtc=n_ichiran_cst_n5_ttl 
-        job_name:PayPayを広める営業／“支払い”の革命を！★未経験歓迎 
-        annual_income:
-                324万円／月給27万円／入社1年目／営業 
-        nearest_station:
 
-              ＜転勤なし＞東京・横浜・大宮・名古屋・大阪・神戸・京都・福岡・札幌・盛…
-        """
         """
                      company_name　            会社名
                      job_name　　　             ポジション　

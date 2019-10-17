@@ -1,10 +1,6 @@
-doda ok
-green ok
-en ok
-wantedly ok
-
-
-
-
-type 完成
+doda          完成
+green         完成
+wantedly      完成
+type          完成
 next_rikunabi 完成
+en            完成

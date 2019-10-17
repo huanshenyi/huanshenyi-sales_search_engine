@@ -26,6 +26,7 @@ class DodaItem(scrapy.Item):
     annual_income_max = scrapy.Field()
     occupation = scrapy.Field()
     source = scrapy.Field()
+    published_time = scrapy.Field()
     create_data = scrapy.Field()
 
 
@@ -37,7 +38,11 @@ class GreenItem(scrapy.Item):
     nearest_station = scrapy.Field()
     longitude = scrapy.Field()
     latitude = scrapy.Field()
+    annual_income_min = scrapy.Field()
+    annual_income_max = scrapy.Field()
+    occupation = scrapy.Field()
     source = scrapy.Field()
+    published_time = scrapy.Field()
     create_data = scrapy.Field()
 
 
@@ -49,7 +54,11 @@ class EnItem(scrapy.Item):
     nearest_station = scrapy.Field()
     longitude = scrapy.Field()
     latitude = scrapy.Field()
+    annual_income_min = scrapy.Field()
+    annual_income_max = scrapy.Field()
+    occupation = scrapy.Field()
     source = scrapy.Field()
+    published_time = scrapy.Field()
     create_data = scrapy.Field()
 
 
