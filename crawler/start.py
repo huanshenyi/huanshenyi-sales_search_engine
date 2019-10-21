@@ -3,7 +3,7 @@ from scrapy import cmdline
 # scrapy crawl jobbole -s JOBDIR=jobs/001  001->各クローラーは独自なファイルが必要
 
 # doda
-cmdline.execute("scrapy crawl doda".split())
+# cmdline.execute("scrapy crawl doda".split())
 
 # Green
 # cmdline.execute("scrapy crawl green".split())
@@ -21,7 +21,7 @@ cmdline.execute("scrapy crawl doda".split())
 # cmdline.execute("scrapy crawl next_rikunabi".split())
 
 # mynavi
-# cmdline.execute("scrapy crawl mynavi".split())
+cmdline.execute("scrapy crawl mynavi".split())
 
 # indeed
 # cmdline.execute("scrapy crawl indeed".split())

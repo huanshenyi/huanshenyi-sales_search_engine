@@ -183,14 +183,58 @@ text= """
 <dd>年収485万円／25歳（入社3年）<br>年収606万円／32歳（入社6年）</dd>
 """
 
-text = "【年収例】<br>400万円～500万円／30歳…"
+# text = "【年収例】<br>400万円～500万円／30歳…"
+# pattern = re.compile(r'<[^>]+>', re.S)
+# result = pattern.sub('', text)
+# xx = re.compile("(\d{3,4})万円")
+#
+# result = re.findall(xx, result)
+#
+#
+#
+#
+# print(result)
+
+from urllib.parse import urlencode
+
+# test = ("------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"occ\"\r\n\r\n11105\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--")
+# print(test)
+
+# import requests
+#
+# url = "https://mynavi.agentsearch.jp/jobList/"
+#
+# querystring = {"page":"1"}
+#
+# payload = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"occ\"\r\n\r\n11105\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"hiddenOcc\"\r\n\r\n11105\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"selectPageIndex\"\r\n\r\n1\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--"
+# headers = {
+#     'content-type': "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
+#     'cache-control': "no-cache",
+#     'postman-token': "a3320a33-6ded-f7e2-a90d-223e1168d2dc"
+#     }
+#
+# response = requests.request("POST", url, data=payload, headers=headers, params=querystring)
+#
+# print(response.text)
+"""
+<Selector xpath="//div[@class='detail cf']/dl[4]/dd" data='<dd>東京都\r<br>港区西新橋1丁目16-3 1東洋海事ビル５階</dd>'>
+"""
+
+# text = """
+# <Selector xpath="//div[@class='detail cf']/dl[4]/dd" data='<dd>＜福岡本社＞\u3000福岡市博多区東比恵3-1-2\u3000東比恵ビジネスセ…</dd>'>
+# """
+# pattern = re.compile(r'<[^>]+>', re.S)
+# result = pattern.sub('', text)
+# result = result.strip()
+# result= result.replace("　","")
+# result = re.sub("[＜＞…'>]", "", result)
+# print(result)
+
+text = """
+<p class="job-name">
+																	福祉機器トップシェア企業のルート営業職｜関西採用｜福利厚生充実<span class="employment-situation-new">正社員</span>
+																	</p>
+"""
 pattern = re.compile(r'<[^>]+>', re.S)
 result = pattern.sub('', text)
-xx = re.compile("(\d{3,4})万円")
-
-result = re.findall(xx, result)
-
-
-
-
-print(result)
+print(result.strip())
