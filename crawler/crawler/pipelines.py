@@ -54,11 +54,13 @@ class SqlitePipeline(object):
     def process_item(self, item, spider):
         insert_sql = """
         
-        insert into crawler_crawlerdata(company_name,job_name,link_url,nearest_station,longitude,latitude,source,create_data) VALUES(?,?,?,?,?,?,?,?)
+        insert into crawler_crawlerdata(company_name,job_name,link_url,nearest_station,longitude,latitude,source,
+        occupation,annual_income_min,annual_income_max,published_time,create_data) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)
         """
-        self.cursor.execute(insert_sql, (item["company_name"], item["job_name"],
-                                         item["link_url"], item["nearest_station"],
-                                         item["longitude"], item["latitude"], item["source"], item["create_data"]))
+        self.cursor.execute(insert_sql, (item["company_name"], item["job_name"], item["link_url"],
+                                         item["nearest_station"], item["longitude"], item["latitude"], item["source"],
+                                         item["occupation"], item["annual_income_min"], item["annual_income_max"],
+                                         item["published_time"], item["create_data"], ))
         self.connection.commit()
         return item
 

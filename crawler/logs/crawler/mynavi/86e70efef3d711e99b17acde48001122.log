@@ -1,0 +1,457 @@
+2019-10-21 16:51:04 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: crawler)
+2019-10-21 16:51:04 [scrapy.utils.log] INFO: Versions: lxml 4.4.1.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.7.0, Python 3.7.3 (default, Mar 27 2019, 09:23:15) - [Clang 10.0.1 (clang-1001.0.46.3)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Darwin-18.7.0-x86_64-i386-64bit
+2019-10-21 16:51:04 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'crawler', 'DOWNLOAD_DELAY': 2, 'LOG_FILE': 'logs/crawler/mynavi/86e70efef3d711e99b17acde48001122.log', 'NEWSPIDER_MODULE': 'crawler.spiders', 'SPIDER_MODULES': ['crawler.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36'}
+2019-10-21 16:51:04 [scrapy.extensions.telnet] INFO: Telnet Password: f82041f4b0b13915
+2019-10-21 16:51:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2019-10-21 16:51:05 [py.warnings] WARNING: /Users/tianxiaoyi/spider/sales_search_engine/crawler/crawler/middlewares.py:135: ScrapyDeprecationWarning: Importing from scrapy.xlib.pydispatch is deprecated and will no longer be supported in future Scrapy versions. If you just want to connect signals use the from_crawler class method, otherwise import pydispatch directly if needed. See: https://github.com/scrapy/scrapy/issues/1762
+  from scrapy.xlib.pydispatch import dispatcher
+
+2019-10-21 16:51:05 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'crawler.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-10-21 16:51:05 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-10-21 16:51:05 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.EnrolldataPipeline']
+2019-10-21 16:51:05 [scrapy.core.engine] INFO: Spider opened
+2019-10-21 16:51:05 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-10-21 16:51:05 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-10-21 16:51:08 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://mynavi.agentsearch.jp/jobList/> (referer: None)
+2019-10-21 16:51:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31899071> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31899071>
+{'annual_income_max': '1000',
+ 'annual_income_min': '300',
+ 'company_name': '株式会社リヴトラスト',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 9, 560203),
+ 'job_name': '【完全未経験歓迎】稼ぎたいを応援※頑張っただけ評価される不動産営業職※正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31899071',
+ 'longitude': 0,
+ 'nearest_station': '東京都港区六本木7-18-18 住友ビル六本通ビル10階\\r...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.17',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31979065> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31979065>
+{'annual_income_max': '650',
+ 'annual_income_min': '450',
+ 'company_name': 'NECネッツエスアイ株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 11, 970860),
+ 'job_name': '【金融機関向け】ソリューション営業※1回面接※正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31979065',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r文京区後楽2-6-1\\u3000飯田橋ファーストタワー',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31979077> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31979077>
+{'annual_income_max': '600',
+ 'annual_income_min': '450',
+ 'company_name': '株式会社ヒト・コミュニケーションズ',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 14, 327644),
+ 'job_name': '【BPOサービスの提案営業】※裁量範囲広い/提案幅広い正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31979077',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r豊島区東池袋1-9-6 ヒトコムjobビル2F',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978956> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978956>
+{'annual_income_max': '901',
+ 'annual_income_min': '495',
+ 'company_name': 'ソフトバンク・テクノロジー株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 17, 193690),
+ 'job_name': '公共向け（中央省庁/独立行政法人/地方自治体）営業正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978956',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r新宿区新宿六丁目27番30号\\u3000新宿イーストサイドス...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978925> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978925>
+{'annual_income_max': '650',
+ 'annual_income_min': '500',
+ 'company_name': '富士通株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 19, 451286),
+ 'job_name': '顧客通信キャリア会社との協創ビジネス企画立案・実施正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978925',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r港区東新橋1-5-2\\u3000汐留シティセンター',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978656> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978656>
+{'annual_income_max': '700',
+ 'annual_income_min': '700',
+ 'company_name': '株式会社イノベント',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 22, 121143),
+ 'job_name': '【幹部候補】展示会の提案営業（住宅・IR業界）正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978656',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r港区南青山3-1-31 NBF南青山ビル2F',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31979067> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31979067>
+{'annual_income_max': '650',
+ 'annual_income_min': '480',
+ 'company_name': '株式会社レアジョブ',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 24, 157527),
+ 'job_name': '法人営業【東京】正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31979067',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r渋谷区神宮前6-27-8 京セラ原宿ビル2階',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978916> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978916>
+{'annual_income_max': '650',
+ 'annual_income_min': '500',
+ 'company_name': '株式会社西村商会',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 27, 38604),
+ 'job_name': '【東京】法人営業\u3000※残業少※裁量ある営業スタイル※正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978916',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r千代田区内幸町1-1-1帝国ホテルタワー7階',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978844> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978844>
+{'annual_income_max': '800',
+ 'annual_income_min': '500',
+ 'company_name': '株式会社ブレインパッド',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 29, 281339),
+ 'job_name': 'AIコンサルティング営業正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978844',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r港区白金台3-2-10白金台ビル3F',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31651056> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31651056>
+{'annual_income_max': 0,
+ 'annual_income_min': 0,
+ 'company_name': '（株）エージーエル',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 31, 123996),
+ 'job_name': '物流ソリューションの提案営業/日鉄住金物産100％子会社/黒字経営/転勤なし/国際物流のプロ正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31651056',
+ 'longitude': 0,
+ 'nearest_station': '東京都港区赤坂（最寄駅：東京メトロ銀座・半蔵門 線「青山一丁',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.17',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978720> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978720>
+{'annual_income_max': '800',
+ 'annual_income_min': '600',
+ 'company_name': '日鉄エンジニアリング株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 33, 989585),
+ 'job_name': '【文系総合職】日本製鉄グループ正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978720',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r品川区大崎1-5-1\\u3000大崎センタービル',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31979006> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31979006>
+{'annual_income_max': '740',
+ 'annual_income_min': '450',
+ 'company_name': 'アイデックス ラボラトリーズ株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 35, 887798),
+ 'job_name': '動物病院営業（ペット動物）大阪・奈良・和歌山※転勤無※正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31979006',
+ 'longitude': 0,
+ 'nearest_station': '大阪府\\rエリア',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:36 [scrapy.crawler] INFO: Received SIGTERM, shutting down gracefully. Send again to force 
+2019-10-21 16:51:36 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-10-21 16:51:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978678> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978678>
+{'annual_income_max': '1000',
+ 'annual_income_min': '600',
+ 'company_name': '日本エアロスペース株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 38, 507013),
+ 'job_name': '営業総合職【青山一丁目駅直結】正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978678',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r港区南青山1-1-1\\u3000新青山ビル\\u3000西館20Ｆ',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978898> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978898>
+{'annual_income_max': '3000',
+ 'annual_income_min': '700',
+ 'company_name': 'ジャパニアス株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 41, 262981),
+ 'job_name': '営業職【横浜】正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978898',
+ 'longitude': 0,
+ 'nearest_station': '神奈川県\\r横浜市西区みなとみらい2-2-1横浜ランドマーク...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978642> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978642>
+{'annual_income_max': '1000',
+ 'annual_income_min': '700',
+ 'company_name': 'アマゾンジャパン合同会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 43, 718828),
+ 'job_name': 'Strategic Account Manager正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978642',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r目黒下目黒1－8－1アルコタワー（もしくはアネック...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31710235> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31710235>
+{'annual_income_max': 0,
+ 'annual_income_min': 0,
+ 'company_name': '株式会社コンカー',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 46, 274253),
+ 'job_name': 'Enterprise Sales正社員\r\n'
+             '\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHigh Class',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31710235',
+ 'longitude': 0,
+ 'nearest_station': '東京都 愛知県',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.10.28',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31979036> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31979036>
+{'annual_income_max': '700',
+ 'annual_income_min': '450',
+ 'company_name': '株式会社リンクス',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 48, 904689),
+ 'job_name': '法人営業【東京勤務/当面転勤なし】正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31979036',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r品川区上大崎2-24-9\\u3000アイケイビルディング４F...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31979090> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31979090>
+{'annual_income_max': '600',
+ 'annual_income_min': '450',
+ 'company_name': 'クーパービジョン・ジャパン株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 51, 601584),
+ 'job_name': 'セールスレップ【東京】正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31979090',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\rホームオフィスより直行直帰',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978752> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978752>
+{'annual_income_max': '800',
+ 'annual_income_min': '550',
+ 'company_name': '三國機械工業株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 54, 103231),
+ 'job_name': '【プラント向け営業】※本社勤務※正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978752',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r墨田区両国3丁目19番11号',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31979083> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31979083>
+{'annual_income_max': '575',
+ 'annual_income_min': '467',
+ 'company_name': '株式会社LIFULL',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 55, 905563),
+ 'job_name': 'コンサルティング営業【本社勤務】日本一働きたい会社を目指して正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31979083',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r千代田区麹町1-4-4',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978810> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:51:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978810>
+{'annual_income_max': '900',
+ 'annual_income_min': '500',
+ 'company_name': '富士通株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 51, 58, 67527),
+ 'job_name': '重電・産業用電気機器のお客様に対する個社アカウント営業正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978810',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r港区東新橋1-5-2\\u3000汐留シティセンター',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:52:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978832> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:52:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978832>
+{'annual_income_max': '800',
+ 'annual_income_min': '500',
+ 'company_name': '株式会社ミシャジャパン',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 52, 0, 397284),
+ 'job_name': '営業マネージャー候補※韓国の最大手化粧品メーカー正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978832',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r港区芝大門2-12-7RBM芝パークビル4階',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:52:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31979052> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:52:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31979052>
+{'annual_income_max': '650',
+ 'annual_income_min': '450',
+ 'company_name': '株式会社グローマス',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 52, 2, 883993),
+ 'job_name': '【歯科業界特化のキャリアアドバイザー】リーダーorMGR正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31979052',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r千代田区神田東松下町38 鳥本鋼業ビル4F',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:52:05 [scrapy.extensions.logstats] INFO: Crawled 24 pages (at 24 pages/min), scraped 23 items (at 23 items/min)
+2019-10-21 16:52:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978679> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:52:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978679>
+{'annual_income_max': '1000',
+ 'annual_income_min': '600',
+ 'company_name': 'トランスコスモス株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 52, 5, 745741),
+ 'job_name': 'Webマーケティングの企画提案営業（東）正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978679',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r渋谷区渋谷3-25-18',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:52:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978852> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:52:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978852>
+{'annual_income_max': '750',
+ 'annual_income_min': '500',
+ 'company_name': '株式会社PALTEK',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 52, 8, 255193),
+ 'job_name': 'AIソリューション担当マーケティング正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978852',
+ 'longitude': 0,
+ 'nearest_station': '神奈川県\\r横浜市港北区新横浜 2-3-12新横浜スクエアビ...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:52:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31510708> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:52:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31510708>
+{'annual_income_max': '500',
+ 'annual_income_min': '350',
+ 'company_name': '弁護士ドットコム株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 52, 9, 834093),
+ 'job_name': '税理士向けセールス（税理士ドットコム）正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31510708',
+ 'longitude': 0,
+ 'nearest_station': '東京都 港区',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.17',
+ 'source': 'マイナビ'}
+2019-10-21 16:52:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31978686> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:52:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31978686>
+{'annual_income_max': '1000',
+ 'annual_income_min': '600',
+ 'company_name': '株式会社エヌ・ティ・ティ・データ',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 52, 12, 700879),
+ 'job_name': '【法人】キャッシュレス決済のソリューション営業正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31978686',
+ 'longitude': 0,
+ 'nearest_station': '東京都\\r江東区豊洲3-3-3\\u3000豊洲センタービル',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.03',
+ 'source': 'マイナビ'}
+2019-10-21 16:52:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31840690> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-21 16:52:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31840690>
+{'annual_income_max': 0,
+ 'annual_income_min': 0,
+ 'company_name': 'アクシスコンサルティング株式会社',
+ 'create_data': datetime.datetime(2019, 10, 21, 16, 52, 14, 336445),
+ 'job_name': '人材紹介事業部\u3000法人営業マネージャ候補正社員',
+ 'latitude': 0,
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31840690',
+ 'longitude': 0,
+ 'nearest_station': '東京都',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.21終了予定日：2019.11.17',
+ 'source': 'マイナビ'}
+2019-10-21 16:52:14 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 33301,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 28,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 317309,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 29,
+ 'elapsed_time_seconds': 69.315616,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 10, 21, 7, 52, 14, 338799),
+ 'item_scraped_count': 28,
+ 'log_count/DEBUG': 57,
+ 'log_count/INFO': 12,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 74432512,
+ 'memusage/startup': 61906944,
+ 'request_depth_max': 1,
+ 'response_received_count': 29,
+ 'scheduler/dequeued': 29,
+ 'scheduler/dequeued/memory': 29,
+ 'scheduler/enqueued': 51,
+ 'scheduler/enqueued/memory': 51,
+ 'start_time': datetime.datetime(2019, 10, 21, 7, 51, 5, 23183)}
+2019-10-21 16:52:14 [scrapy.core.engine] INFO: Spider closed (shutdown)

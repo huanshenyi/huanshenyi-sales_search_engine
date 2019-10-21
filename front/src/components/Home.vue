@@ -49,9 +49,9 @@ export default class Home extends Vue{
             this.count = res.data.count;
             this.crawlerData.forEach((data:any)=>{
                 this.geoCoordMap[`${data.company_name}`] = [Number(data.longitude), Number(data.latitude)];
-                this.datas.push({name:data.company_name,value:1})
+                this.datas.push({name:data.company_name,value:Number(data.annual_income_max)})
             });
-        })
+        });
     }
     handleSearch(){
             (this as any).$router.push({path: "/details", query:{ searchVal: this.searchVal }})
@@ -227,6 +227,9 @@ export default class Home extends Vue{
                     type: 'scatter',
                     coordinateSystem: 'bmap',
                     data: this.convertData(this.datas),
+                    symbolSize: function (val:any) {
+                        return val[2] / 60;
+                    },
                     label: {
                         normal: {
                             formatter: '{b}',
@@ -242,7 +245,39 @@ export default class Home extends Vue{
                             color: '#ddb926'
                         }
                     }
-                },]
+                },
+                {
+                    name: 'Top 5',
+                    type: 'effectScatter',
+                    coordinateSystem: 'bmap',
+                    data: this.convertData(this.datas.sort(function (a:any, b:any) {
+                        return b.value - a.value;
+                    }).slice(0, 6)),
+                    symbolSize: function (val:any) {
+                        return val[2] / 60;
+                    },
+                    showEffectOn: 'emphasis',
+                    rippleEffect: {
+                        brushType: 'stroke'
+                    },
+                    hoverAnimation: true,
+                    label: {
+                        normal: {
+                            formatter: '{b}',
+                            position: 'right',
+                            show: true
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#f4e925',
+                            shadowBlur: 10,
+                            shadowColor: '#333'
+                        }
+                    },
+                    zlevel: 1
+                },
+            ]
         })
     }
 }

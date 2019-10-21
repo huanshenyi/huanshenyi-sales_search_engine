@@ -118,7 +118,7 @@ class MynaviSpider(scrapy.Spider):
         #       f"published_time:{published_time}")
 
         """経度緯度の整理"""
-        # longitude, latitude = get_coordinate(company_name)
+        longitude, latitude = get_coordinate(company_name)
 
         """
                      company_name　            会社名
@@ -141,8 +141,8 @@ class MynaviSpider(scrapy.Spider):
         mynav_item["job_name"] = job_name
         mynav_item["link_url"] = link_url
         mynav_item["nearest_station"] = nearest_station
-        mynav_item["longitude"] = 0
-        mynav_item["latitude"] = 0
+        mynav_item["longitude"] = longitude
+        mynav_item["latitude"] = latitude
         mynav_item["source"] = "マイナビ"
         mynav_item["occupation"] = "営業"
         mynav_item["annual_income_min"] = annual_income_min

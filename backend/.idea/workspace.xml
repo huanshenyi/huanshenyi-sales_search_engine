@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c932e23-0e2e-41cc-9653-654b041846c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/REDEME.md" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/REDEME.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/crawler/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/crawler/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/crawler/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/crawler/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/crawler/spiders/mynavi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/crawler/spiders/mynavi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/dbs/.DS_Store.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/dbs/crawler.db" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/dbs/crawler.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/eggs/crawler/1571640069.egg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../crawler/twistd.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/twistd.pid" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="197">
+              <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -66,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler/serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            <state relative-caret-position="285">
+              <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -75,20 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawler/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="das://5beb5231-183d-4453-abc9-cac472d1f777/schema/main/table/crawler_crawlerdata">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+            <state relative-caret-position="-28">
+              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -120,21 +124,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/crawler/models.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
         <option value="$PROJECT_DIR$/crawler/filters.py" />
-        <option value="$PROJECT_DIR$/crawler/serializer.py" />
         <option value="$PROJECT_DIR$/crawler/views.py" />
         <option value="$PROJECT_DIR$/backend/urls.py" />
         <option value="$PROJECT_DIR$/backend/settings.py" />
+        <option value="$PROJECT_DIR$/crawler/models.py" />
+        <option value="$PROJECT_DIR$/crawler/serializer.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="149" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-11" />
     <option name="y" value="23" />
-    <option name="width" value="1120" />
-    <option name="height" value="808" />
+    <option name="width" value="1440" />
+    <option name="height" value="807" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -233,23 +237,23 @@
       <workItem from="1570085865058" duration="15926000" />
       <workItem from="1570413447748" duration="3575000" />
       <workItem from="1570499976401" duration="1014000" />
+      <workItem from="1571645680682" duration="3096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23390000" />
+    <option name="totallyTimeSpent" value="26486000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="149" y="23" width="1120" height="808" extended-state="0" />
-    <editor active="true" />
+    <frame x="-11" y="23" width="1440" height="807" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22912802" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1795422" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="aws.explorer" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42837274" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42797202" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -258,16 +262,16 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.35841313" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.35804197" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32968536" />
-      <window_info anchor="bottom" id="manage.py@backend" order="14" weight="0.6274238" />
+      <window_info anchor="bottom" id="manage.py@backend" order="14" weight="0.62657344" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.3297568" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.36920223" />
+      <window_info anchor="right" id="Database" order="5" weight="0.36909872" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,37 +301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -338,10 +311,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="das://5beb5231-183d-4453-abc9-cac472d1f777/schema/main/table/crawler_crawlerdata">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
         </state>
       </provider>
     </entry>

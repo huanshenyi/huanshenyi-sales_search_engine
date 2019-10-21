@@ -17,5 +17,5 @@ class CrawlerMapDataSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = CrawlerData
-        fields = ("company_name", "longitude", "latitude", "nearest_station",)
+        fields = ("company_name", "longitude", "latitude", "nearest_station", "annual_income_max")
 

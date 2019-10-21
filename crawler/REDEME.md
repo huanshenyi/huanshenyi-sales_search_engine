@@ -31,7 +31,7 @@ curl http://localhost:6800/daemonstatus.json
 
 ## サーバー上のクローラーを起動
 ```text
-http://localhost:6800/schedule.json -d project=crawler -d spider=mynavi
+curl http://localhost:6800/schedule.json -d project=crawler -d spider=mynavi
 ```
 
 ## サーバー上のクローラー を停止する
@@ -115,3 +115,9 @@ curl http://localhost:6800/delversion.json -d project=crawler -d version=1571637
 ````text
 curl http://localhost:6800/delproject.json -d project=crawler
 ````
+
+## 起動ファイルを指定する
+
+```text
+scrapyd -d 指定したいdir(/Users/tianxiaoyi/spider/sales_search_engine/crawler)
+```

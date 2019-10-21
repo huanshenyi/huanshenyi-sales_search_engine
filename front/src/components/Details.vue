@@ -19,7 +19,7 @@
                                     <div v-for="(item, key) in GetDodaData" :key="item.id" class="text item" v-if="key<10">
                                         <a :href="item.link_url">{{item.job_name}}</a>
                                     </div>
-                                    <el-button type="text" @click="dialogVisible = true" v-show="GetDodaData.length>10">
+                                    <el-button type="text" @click="dialogVisible = true" v-show="GetDodaData.length>5">
                                         さらに表示
                                     </el-button>
                                     <el-dialog
@@ -40,11 +40,26 @@
                         <el-col :span="6"><div class="grid-content bg-purple">
                             <el-card class="box-card">
                                 <div slot="header" class="clearfix">
-                                    <span>green</span>
+                                    <span>マイナビ({{GetMyNaviData.length}}件)</span>
                                 </div>
-                                <div v-for="o in 4" :key="o" class="text item">
-                                    {{'内容リスト ' + o }}
+                                <div v-for="(item, key) in GetMyNaviData" :key="item.id" class="text item">
+                                    <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
                                 </div>
+                                <el-button type="text" @click="dialogVisible = true" v-show="GetDodaData.length>5">
+                                    さらに表示
+                                </el-button>
+                                <el-dialog
+                                        title="DODA"
+                                        :visible.sync="dialogVisible"
+                                        width="30%"
+                                        :before-close="handleClose">
+                                    <div v-for="(item, key) in GetMyNaviData" :key="item.id" class="text item">
+                                        <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                                    </div>
+                                    <span slot="footer" class="dialog-footer">
+                                         <el-button type="primary" @click="dialogVisible = false">ok</el-button>
+                                        </span>
+                                </el-dialog>
                             </el-card>
                         </div></el-col>
                         <el-col :span="6"><div class="grid-content bg-purple">
@@ -112,10 +127,10 @@ export default class Details extends Vue{
     @Provide() loading: boolean = false;
     @Provide() searchData:any = [];
     @Provide() dodaData:any = [];
+    @Provide() myNaviData:any = [];
     created(){
         this.loading = false;
         this.searchVal = (this as any).$route.query.searchVal ? (this as any).$route.query.searchVal : "";
-        console.log(this.searchVal);
         this.handleSearch()
     }
     mounted(){
@@ -127,13 +142,27 @@ export default class Details extends Vue{
     }
 
     get GetDodaData(){
-        console.log(this.searchData);
         for(let i =0;i<this.searchData.length;i++){
             if (this.searchData[i].source == "doda"){
                 this.dodaData.push(this.searchData[i])
             }
         }
         return this.dodaData
+    }
+    get GetMyNaviData(){
+        for(let i =0;i<this.searchData.length;i++){
+            if (this.searchData[i].source == "マイナビ"){
+                this.myNaviData.push(this.searchData[i])
+            }
+        }
+        return this.myNaviData
+    }
+    handleClose(done:any) {
+        this.$confirm('閉じます？')
+            .then(_ => {
+                done();
+            })
+            .catch(_ => {});
     }
 }
 </script>
