@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c2078bf-25a9-4a99-b7f5-90eaeb16b3fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front/src/components/List.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/crawler/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/crawler/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/crawler/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/crawler/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/REDEME.md" beforeDir="false" afterPath="$PROJECT_DIR$/REDEME.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/spiders/mynavi.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/spiders/mynavi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbs/.DS_Store.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbs/crawler.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbs/crawler.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eggs/crawler/1571640069.egg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twistd.pid" beforeDir="false" afterPath="$PROJECT_DIR$/twistd.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/components/Details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/Details.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/router.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
+            <state relative-caret-position="1725">
               <caret line="115" column="29" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
             </state>
           </provider>
@@ -66,10 +56,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            <state relative-caret-position="174">
+              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler/spiders/en.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1184">
+              <caret line="113" column="33" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="33" />
+              <folding>
+                <element signature="e#24#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawler/spiders/mynavi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="148" column="37" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="37" />
+            <state relative-caret-position="154">
+              <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
               </folding>
@@ -100,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/REDEME.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="268">
+              <first_editor relative-caret-position="1155">
                 <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="79" />
               </first_editor>
               <second_editor />
@@ -174,11 +176,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-209" />
-    <option name="y" value="-1057" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="807" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -186,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,10 +199,17 @@
               <item name="crawler" type="462c0819:PsiDirectoryNode" />
               <item name="crawler" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="crawler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,17 +330,19 @@
       <workItem from="1570520532894" duration="1247000" />
       <workItem from="1570765089035" duration="16350000" />
       <workItem from="1571132685442" duration="75651000" />
-      <workItem from="1571635694343" duration="11800000" />
+      <workItem from="1571635694343" duration="11869000" />
+      <workItem from="1571795780464" duration="1680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164549000" />
+    <option name="totallyTimeSpent" value="166298000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-209" y="-1057" width="1920" height="1057" extended-state="1" />
+    <frame x="0" y="23" width="1440" height="807" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49747476" visible="true" weight="0.13631523" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49747476" visible="true" weight="0.13805436" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="aws.explorer" order="2" sideWeight="0.50252527" side_tool="true" weight="0.18097281" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -348,7 +357,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.5139896" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.51468533" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -448,16 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/spiders/en.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="102" selection-end-column="51" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawler/spiders/wantedly.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
@@ -543,13 +542,7 @@
         <state relative-caret-position="-1877" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapyd.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapyd.conf" />
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -560,37 +553,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawler/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="1725">
           <caret line="115" column="29" selection-start-line="115" selection-start-column="29" selection-end-line="115" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/REDEME.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="268">
-            <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="79" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/pipelines.py">
+    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -601,10 +574,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/REDEME.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1155">
+            <caret line="77" selection-start-line="77" selection-end-line="77" selection-end-column="79" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/spiders/en.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1184">
+          <caret line="113" column="33" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="33" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawler/spiders/mynavi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="148" column="37" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="37" />
+        <state relative-caret-position="154">
+          <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
           </folding>

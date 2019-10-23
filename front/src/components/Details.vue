@@ -1,215 +1,95 @@
 <template>
-    <Layout>
-        <div slot="container">
-            <div class="details">
-                <div class="search-box">
-                    <el-input size="small" v-model="searchVal" placeholder="企業名を入力して下さい"></el-input>
-                    <el-button size="small" type="primary">
-                        <i class="el-icon-search" @click="handleSearch">検索</i>
-                    </el-button>
-                </div>
-                <div class="content-box">
-                    <el-row :gutter="20">
-                        <el-col :span="6">
-                            <div class="grid-content bg-purple">
-                                <el-card class="box-card">
-                                    <div slot="header" class="clearfix">
-                                        <span>DODA({{GetDodaData.length}}件)</span>
-                                    </div>
-                                    <div v-for="(item, key) in GetDodaData" :key="item.id" class="text item" v-if="key<10">
-                                        <a :href="item.link_url">{{item.job_name}}</a>
-                                    </div>
-                                    <el-button type="text" @click="dialogVisible = true" v-show="GetDodaData.length>5">
-                                        さらに表示
-                                    </el-button>
-                                    <el-dialog
-                                            title="DODA"
-                                            :visible.sync="dialogVisible"
-                                            width="30%"
-                                            :before-close="handleClose">
-                                        <div v-for="(item, key) in GetDodaData" :key="item.id" class="text item">
-                                            <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
-                                        </div>
-                                        <span slot="footer" class="dialog-footer">
-                                         <el-button type="primary" @click="dialogVisible = false">ok</el-button>
-                                        </span>
-                                    </el-dialog>
-                                </el-card>
+    <el-dialog
+            :close-on-click-modal="false"
+            :show-close="false"
+            :title=companyName
+            :visible.sync="dialogVisible"
+            width="60%"
+            center
+            >
+        <el-tabs v-model="activeName" @tab-click="handleClick">
+            <el-tab-pane label="ディフォルト" name="default">ディフォルト</el-tab-pane>
+            <el-tab-pane label="年収順" name="first">年収順</el-tab-pane>
+            <el-tab-pane label="未定" name="second">未定</el-tab-pane>
+        </el-tabs>
+        <div v-for="(item, key) in GetData" :key="item.id" class="text item">
+            <el-row :gutter="12" class="grid-content">
+                <el-col :span="23">
+                    <el-card shadow="never">
+                        <div slot="header" class="clearfix">
+                            <span>{{item.company_name}}</span>
+                            <a :href="item.link_url">
+                             <el-button style="float: right; padding: 3px 0" type="text">掲載元へ</el-button>
+                            </a>
                         </div>
-                        </el-col>
-                        <el-col :span="6"><div class="grid-content bg-purple">
-                            <el-card class="box-card">
-                                <div slot="header" class="clearfix">
-                                    <span>マイナビ({{GetMyNaviData.length}}件)</span>
+                        <div style="padding: 13px;">
+                            <el-col :xs="8" :sm="6" :md="7" :lg="8" :xl="2">
+                                <div class="grid-content">
+                                    <el-image
+                                            style="width: 100px; height: 100px"
+                                            :src="imgs"
+                                    >
+                                    </el-image>
                                 </div>
-                                <div v-for="(item, key) in GetMyNaviData" :key="item.id" class="text item">
-                                    <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
-                                </div>
-                                <el-button type="text" @click="dialogVisible = true" v-show="GetDodaData.length>5">
-                                    さらに表示
-                                </el-button>
-                                <el-dialog
-                                        title="DODA"
-                                        :visible.sync="dialogVisible"
-                                        width="30%"
-                                        :before-close="handleClose">
-                                    <div v-for="(item, key) in GetMyNaviData" :key="item.id" class="text item">
-                                        <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                            </el-col>
+                            <el-col :xs="4" :sm="6" :md="8" :lg="13" :xl="19" class="bg-purple-light">
+                                <div class="content">
+                                    <div style="padding-bottom: 10px">掲載時間: {{item.published_time}}</div>
+                                    <p style="padding-bottom: 10px">
+                                      募集内容: <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>/{{item.occupation}}
+                                    </p>
+                                    <div style="padding-bottom: 10px">
+                                        提示年収: {{item.annual_income_min}}万円~{{item.annual_income_max}}万円
                                     </div>
-                                    <span slot="footer" class="dialog-footer">
-                                         <el-button type="primary" @click="dialogVisible = false">ok</el-button>
-                                        </span>
-                                </el-dialog>
-                            </el-card>
-                        </div></el-col>
-                        <el-col :span="6"><div class="grid-content bg-purple">
-                            <el-card class="box-card">
-                                <div slot="header" class="clearfix">
-                                    <span>wantedly</span>
-                                </div>
-                                <div v-for="o in 4" :key="o" class="text item">
-                                    {{'内容リスト ' + o }}
-                                </div>
-                            </el-card>
-                        </div></el-col>
-                        <el-col :span="6"><div class="grid-content bg-purple">
-                            <el-card class="box-card">
-                                <div slot="header" class="clearfix">
-                                    <span>エン転職</span>
-                                </div>
-                                <div v-for="o in 4" :key="o" class="text item">
-                                    {{'内容リスト ' + o }}
-                                </div>
-                            </el-card>
-                        </div></el-col>
-                    </el-row>
-                    <el-row :gutter="20">
-                        <el-col :span="6">
-                            <div class="grid-content bg-purple">
-                                <el-card class="box-card">
-                                    <div slot="header" class="clearfix">
-                                        <span>マイナビ転職エージェントサーチ</span>
+                                    <div style="padding-bottom: 10px">
+                                        勤務地: {{item.nearest_station}}
                                     </div>
-                                    <div v-for="o in 4" :key="o" class="text item">
-                                        {{'内容リスト ' + o }}
+                                    <div style="padding-bottom: 10px">
+                                        取得時間: {{item.create_data}}
                                     </div>
-                                </el-card>
-                            </div>
-                        </el-col>
-                        <el-col :span="6"><div class="grid-content bg-purple">
-                            <el-card class="box-card">
-                                <div slot="header" class="clearfix">
-                                    <span>indeed</span>
                                 </div>
-                                <div v-for="o in 4" :key="o" class="text item">
-                                    {{'内容リスト ' + o }}
-                                </div>
-                            </el-card>
-                        </div></el-col>
-                    </el-row>
-                </div>
-            </div>
+                            </el-col>
+                        </div>
+                    </el-card>
+                </el-col>
+            </el-row>
         </div>
-    </Layout>
+        <span slot="footer" class="dialog-footer">
+            <el-button type="primary" @click="$emit('closeDialog')">閉じる</el-button>
+        </span>
+    </el-dialog>
 </template>
 
 <script lang="ts">
-import { Component, Vue, Provide} from "vue-property-decorator"
-import Layout from "@/views/Layout.vue"
+import {Component, Vue, Prop, Provide} from "vue-property-decorator";
+
 @Component({
-    components:{
-        Layout,
-    }
+    components:{}
 })
 export default class Details extends Vue{
-    @Provide() dialogVisible:boolean = false;
-    @Provide() searchVal:string = "";
-    @Provide() loading: boolean = false;
-    @Provide() searchData:any = [];
-    @Provide() dodaData:any = [];
-    @Provide() myNaviData:any = [];
+    @Prop(String) companyName !: string;
+    @Prop(Boolean) dialogVisible !: boolean;
+    @Prop(Array) GetData !: any;
+    @Prop(String) imgs !: string;
+    @Provide() activeName: string =  'default';
     created(){
-        this.loading = false;
-        this.searchVal = (this as any).$route.query.searchVal ? (this as any).$route.query.searchVal : "";
-        this.handleSearch()
+       console.log(this.GetData);
     }
-    mounted(){
+    handleClick(tab:any, event:any) {
+        console.log(tab.label, event);
     }
-    handleSearch():void{
-        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?company_name=${this.searchVal}`).then((res:any)=>{
-            this.searchData = res.data.results
-        })
-    }
-
-    get GetDodaData(){
-        for(let i =0;i<this.searchData.length;i++){
-            if (this.searchData[i].source == "doda"){
-                this.dodaData.push(this.searchData[i])
-            }
-        }
-        return this.dodaData
-    }
-    get GetMyNaviData(){
-        for(let i =0;i<this.searchData.length;i++){
-            if (this.searchData[i].source == "マイナビ"){
-                this.myNaviData.push(this.searchData[i])
-            }
-        }
-        return this.myNaviData
-    }
-    handleClose(done:any) {
-        this.$confirm('閉じます？')
-            .then(_ => {
-                done();
-            })
-            .catch(_ => {});
-    }
-}
+};
 </script>
 
-<style scoped lang="scss">
-    .details{
-        width: 100%;
-        height: 100%;
-        .search-box {
-            background: #fff;
-            margin-bottom: 10px;
-            padding: 10px 10px;
-            border-radius: 4px;
-            height: 55px;
-            box-sizing: border-box;
-            .el-input {
-                width: 200px;
-                margin-right: 10px;
-            }
-        }
-        .search-box {
-             background: #fff;
-             margin-bottom: 10px;
-             padding: 10px 10px;
-             border-radius: 4px;
-             height: 55px;
-             box-sizing: border-box;
-             .el-input {
-                 width: 200px;
-                 margin-right: 10px;
-             }
-         }
-        .content-box{
-            padding-top: 20px;
-            width: 100%;
-            height: 100%;
-            .el-row{
-                margin-bottom: 20px;
-                .text {
-                    font-size: 14px;
-                }
-
-                .item {
-                    margin-bottom: 18px;
-                }
-            }
-
-        }
-    }
+<style scoped>
+.grid-content{
+    padding: 10px 0;
+    border-radius: 4px;
+}
+.bg-purple-light{
+    float: right;
+}
+.content{
+    font-size: 14px;
+}
 </style>

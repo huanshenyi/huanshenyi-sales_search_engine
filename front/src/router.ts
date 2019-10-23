@@ -26,7 +26,7 @@ export default new Router({
     {
       path: "/details",
       name: "details",
-      component: () => import('./components/Details.vue')
+      component: () => import('./components/List.vue')
     }
   ]
 })
