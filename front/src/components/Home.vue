@@ -54,7 +54,7 @@ export default class Home extends Vue{
         });
     }
     handleSearch(){
-            (this as any).$router.push({path: "/details", query:{ searchVal: this.searchVal }})
+            (this as any).$router.push({path: "/list", query:{ searchVal: this.searchVal }})
     }
     convertData (data:any){
         var res = [];

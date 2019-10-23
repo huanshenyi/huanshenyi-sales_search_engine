@@ -12,7 +12,7 @@
             <el-tab-pane label="年収順" name="first">年収順</el-tab-pane>
             <el-tab-pane label="未定" name="second">未定</el-tab-pane>
         </el-tabs>
-        <div v-for="(item, key) in GetData" :key="item.id" class="text item">
+        <div v-for="(item, key) in Datas" :key="item.id" class="text item">
             <el-row :gutter="12" class="grid-content">
                 <el-col :span="23">
                     <el-card shadow="never">
@@ -72,11 +72,23 @@ export default class Details extends Vue{
     @Prop(Array) GetData !: any;
     @Prop(String) imgs !: string;
     @Provide() activeName: string =  'default';
-    created(){
-       console.log(this.GetData);
+    @Provide() testData:any[] = [];
+    @Provide() sortData:string = '';
+    mounted(){
     }
     handleClick(tab:any, event:any) {
-        console.log(tab.label, event);
+        if (tab.label === "年収順"){
+            this.sortData = "年収順"
+        }
+    }
+    get Datas(){
+        if (this.sortData === ""){
+            this.testData = this.GetData;
+        }else if(this.sortData === "年収順"){
+            console.log("ch")
+            this.testData = []
+        }
+        return this.testData
     }
 };
 </script>
