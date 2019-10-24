@@ -96,6 +96,7 @@
             :companyName = "detailsCompanyName"
             :GetData="detailsData"
             :imgs="detailsImages"
+            :searchVal="searchVal"
             @closeDialog="closeDialog"
             ></Details>
         </div>

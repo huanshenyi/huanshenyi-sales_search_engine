@@ -2,17 +2,18 @@
     <el-dialog
             :close-on-click-modal="false"
             :show-close="false"
-            :title=companyName
+            :title="companyName"
             :visible.sync="dialogVisible"
             width="60%"
+            :fullscreen="false"
             center
             >
         <el-tabs v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="ディフォルト" name="default">ディフォルト</el-tab-pane>
-            <el-tab-pane label="年収順" name="first">年収順</el-tab-pane>
-            <el-tab-pane label="未定" name="second">未定</el-tab-pane>
+            <el-tab-pane label="年収順(降順)" name="first">年収順(降順)</el-tab-pane>
+            <el-tab-pane label="年収順(昇順)" name="last">年収順(昇順)</el-tab-pane>
         </el-tabs>
-        <div v-for="(item, key) in Datas" :key="item.id" class="text item">
+        <div v-for="(item, key) in testData" :key="item.id" class="text item">
             <el-row :gutter="12" class="grid-content">
                 <el-col :span="23">
                     <el-card shadow="never">
@@ -61,7 +62,8 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue, Prop, Provide} from "vue-property-decorator";
+import {Component, Vue, Prop, Provide, Watch} from "vue-property-decorator";
+
 
 @Component({
     components:{}
@@ -71,24 +73,51 @@ export default class Details extends Vue{
     @Prop(Boolean) dialogVisible !: boolean;
     @Prop(Array) GetData !: any;
     @Prop(String) imgs !: string;
+    @Prop(String) searchVal!: string;
     @Provide() activeName: string =  'default';
     @Provide() testData:any[] = [];
     @Provide() sortData:string = '';
     mounted(){
+        this.testData = this.GetData;
+
     }
+    @Watch("sortData")
+    onSortDataChanged(newText: string, oldText: string){
+        if (newText === "年収順(降順)"){
+           this.handleSortFirst()
+        }else if (newText === "ディフォルト"){
+           this.handleSortDefault()
+        }else if(newText === "年収順(昇順)"){
+            this.handleSortLast()
+        }
+    }
+
     handleClick(tab:any, event:any) {
-        if (tab.label === "年収順"){
-            this.sortData = "年収順"
+        if (tab.label === "年収順(降順)"){
+            this.sortData = "年収順(降順)"
+        }else if(tab.label === "ディフォルト"){
+            this.sortData = "ディフォルト"
+        }else if(tab.label === "年収順(昇順)"){
+            this.sortData = "年収順(昇順)"
         }
     }
-    get Datas(){
-        if (this.sortData === ""){
-            this.testData = this.GetData;
-        }else if(this.sortData === "年収順"){
-            console.log("ch")
-            this.testData = []
-        }
-        return this.testData
+    handleSortFirst():void{
+        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?annual_income_max=&annual_income_min=&company_name=${this.searchVal}&ordering=-annual_income_max&source=${this.companyName}`)
+            .then((res:any)=>{
+           this.testData = res.data.results;
+        })
+    }
+    handleSortLast():void{
+        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?annual_income_max=&annual_income_min=&company_name=${this.searchVal}&ordering=annual_income_max&source=${this.companyName}`)
+            .then((res:any)=>{
+            this.testData = res.data.results;
+        })
+    }
+    handleSortDefault():void{
+        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?company_name=${this.searchVal}&source=${this.companyName}&annual_income_min=&annual_income_max=`)
+            .then((res:any)=>{
+            this.testData = res.data.results;
+        })
     }
 };
 </script>

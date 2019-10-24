@@ -1,0 +1,1024 @@
+2019-10-24 11:59:45 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: crawler)
+2019-10-24 11:59:45 [scrapy.utils.log] INFO: Versions: lxml 4.4.1.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.7.0, Python 3.7.3 (default, Mar 27 2019, 09:23:15) - [Clang 10.0.1 (clang-1001.0.46.3)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Darwin-18.7.0-x86_64-i386-64bit
+2019-10-24 11:59:45 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'crawler', 'DOWNLOAD_DELAY': 12, 'LOG_FILE': 'logs/crawler/mynavi/54e9fd78f60a11e99c61acde48001122.log', 'NEWSPIDER_MODULE': 'crawler.spiders', 'SPIDER_MODULES': ['crawler.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36'}
+2019-10-24 11:59:45 [scrapy.extensions.telnet] INFO: Telnet Password: 5dcaee6887c5b99c
+2019-10-24 11:59:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2019-10-24 11:59:45 [py.warnings] WARNING: /Users/tianxiaoyi/spider/sales_search_engine/crawler/crawler/middlewares.py:135: ScrapyDeprecationWarning: Importing from scrapy.xlib.pydispatch is deprecated and will no longer be supported in future Scrapy versions. If you just want to connect signals use the from_crawler class method, otherwise import pydispatch directly if needed. See: https://github.com/scrapy/scrapy/issues/1762
+  from scrapy.xlib.pydispatch import dispatcher
+
+2019-10-24 11:59:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'crawler.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-10-24 11:59:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-10-24 11:59:45 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.SqlitePipeline']
+2019-10-24 11:59:45 [scrapy.core.engine] INFO: Spider opened
+2019-10-24 11:59:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-10-24 11:59:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-10-24 11:59:49 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://mynavi.agentsearch.jp/jobList/> (referer: None)
+2019-10-24 11:59:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31746687> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 11:59:58 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 11:59:58 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:00:02 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%82%AF%E3%83%AC%E3%83%87%E3%82%A3%E3%82%BB%E3%82%BE%E3%83%B3 HTTP/1.1" 200 None
+2019-10-24 12:00:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31746687>
+{'annual_income_max': '1000',
+ 'annual_income_min': '600',
+ 'company_name': '株式会社クレディセゾン',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 0, 2, 352889),
+ 'job_name': '新規事業領域での営業～ビッグデータを活用したマーケティングソリューション提案～正社員',
+ 'latitude': '38.260499',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31746687',
+ 'longitude': '140.87905',
+ 'nearest_station': '山手線\\u3000池袋駅\\u3000徒歩8分\\r有楽町線\\u3000東池袋駅\\u3000徒歩5分',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:00:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31906349> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:00:07 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:00:07 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:00:08 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31906349>
+{'annual_income_max': '６５０',
+ 'annual_income_min': '４６０',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 0, 8, 285832),
+ 'job_name': '東証一部上場機械専門商社の輸入営業正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31906349',
+ 'longitude': '139.769017',
+ 'nearest_station': '・本社：東京都中央区。最寄駅：地下鉄日比谷線八丁堀駅徒歩５分',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:00:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31906279> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:00:18 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:00:18 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:00:20 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:00:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31906279>
+{'annual_income_max': '400',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 0, 20, 253098),
+ 'job_name': '未経験OK\u3000大手広告・情報サービス【営業】正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31906279',
+ 'longitude': '139.769017',
+ 'nearest_station': '長崎市 \\r（最寄り駅）\\r●めがね橋（徒歩5分）\\r',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:00:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31994656> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:00:26 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:00:26 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:00:27 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:00:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31994656>
+{'annual_income_max': '480',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 0, 27, 748998),
+ 'job_name': '【東京】メーカー営業職 ※東証1部上場、伝動用ベルトのニッチトップメーカー正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31994656',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都中央区（将来的に転勤の可能性有り）',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:00:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31906211> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:00:38 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:00:38 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:00:39 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:00:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31906211>
+{'annual_income_max': '500',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 0, 39, 517792),
+ 'job_name': '【営業経験者向け】企業への研修サービスの販売正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31906211',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都新宿区新宿3-1-13 京王新宿追分ビル4階',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:00:45 [scrapy.extensions.logstats] INFO: Crawled 6 pages (at 6 pages/min), scraped 5 items (at 5 items/min)
+2019-10-24 12:00:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31779185> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:00:52 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:00:52 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:00:55 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:00:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31779185>
+{'annual_income_max': '600',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 0, 55, 500596),
+ 'job_name': '19E002MH\u3000繊維専門商社の営業契約社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31779185',
+ 'longitude': '139.769017',
+ 'nearest_station': '千代田区外神田',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:01:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31015438> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:01:08 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:01:08 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:01:09 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:01:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31015438>
+{'annual_income_max': '700',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 1, 9, 318108),
+ 'job_name': '17G010MH\u3000動物薬営業支援正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31015438',
+ 'longitude': '139.769017',
+ 'nearest_station': '九州（西日本支店は\\u3000熊本） \\r',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:01:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31171563> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:01:25 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:01:25 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:01:26 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:01:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31171563>
+{'annual_income_max': '400',
+ 'annual_income_min': '190',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 1, 26, 823560),
+ 'job_name': '【ルート営業（業界未経験OK）】電気・機械機器の専門商社正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31171563',
+ 'longitude': '139.769017',
+ 'nearest_station': '香川県観音寺市（本社） \\r',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:01:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31991545> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:01:36 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:01:36 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:01:39 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:01:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31991545>
+{'annual_income_max': '600',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 1, 39, 220453),
+ 'job_name': '【世界シェア７割】コンテナバッグ運用管理サービス営業正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31991545',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都世田谷区',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:01:45 [scrapy.extensions.logstats] INFO: Crawled 10 pages (at 4 pages/min), scraped 9 items (at 4 items/min)
+2019-10-24 12:01:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31945701> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:01:52 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:01:52 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:01:54 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31945701>
+{'annual_income_max': '500',
+ 'annual_income_min': '316',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 1, 54, 128410),
+ 'job_name': '化粧品や美容機器のエステサロン向け美容インストラクター契約社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31945701',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都江東区有明3-6-11東京ファッションタウンビル東館8',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:02:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31280056> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:02:08 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:02:08 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:02:11 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:02:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31280056>
+{'annual_income_max': '3000',
+ 'annual_income_min': '3000',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 2, 11, 479392),
+ 'job_name': '未経験歓迎\u3000イベントプロデューサー【セミナーの企画・提案】正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31280056',
+ 'longitude': '139.769017',
+ 'nearest_station': '都営新宿線「小川町駅」 B5出口より徒歩1分',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:02:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31946007> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:02:25 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:02:25 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:02:27 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:02:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31946007>
+{'annual_income_max': '400',
+ 'annual_income_min': '300',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 2, 27, 937822),
+ 'job_name': '【第二新卒歓迎／業界未経験可】 システム企画営業正社員',
+ 'latitude': '35.675749',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31946007',
+ 'longitude': '139.769761',
+ 'nearest_station': '東京',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:02:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31994686> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:02:40 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:02:40 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:02:41 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:02:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31994686>
+{'annual_income_max': '500',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 2, 41, 63823),
+ 'job_name': '【総合商社グループ】総合職（営業職）正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31994686',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都千代田区\\u3000※将来的に海外事務所及び親会社等への異動・転',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:02:45 [scrapy.extensions.logstats] INFO: Crawled 14 pages (at 4 pages/min), scraped 13 items (at 4 items/min)
+2019-10-24 12:02:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31995120> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:02:56 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:02:56 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:02:58 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:02:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31995120>
+{'annual_income_max': '550',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 2, 58, 29660),
+ 'job_name': '【未経験歓迎】医療機器営業（眼科領域）正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31995120',
+ 'longitude': '139.769017',
+ 'nearest_station': '大阪府大阪市（将来的に転勤の可能性 無し）',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:03:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31998010> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:03:12 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:03:12 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:03:14 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:03:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31998010>
+{'annual_income_max': '600',
+ 'annual_income_min': '300',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 3, 14, 191603),
+ 'job_name': '【20代活躍】【未経験歓迎】営業（セールス・マネジメント）募集正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31998010',
+ 'longitude': '139.769017',
+ 'nearest_station': '〒 151-0051\\u3000東京都渋谷区千駄ヶ谷2-9-6 バルビ',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.10.28',
+ 'source': 'マイナビ'}
+2019-10-24 12:03:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31998024> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:03:21 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:03:21 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:03:22 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:03:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31998024>
+{'annual_income_max': '400',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 3, 22, 709650),
+ 'job_name': '【未経験大歓迎】ケミカル事業部 / コンサルティング営業正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31998024',
+ 'longitude': '139.769017',
+ 'nearest_station': '宮城県\\u3000福島県\\r茨城県\\u3000栃木県\\u3000群馬県\\u3000埼玉県\\u3000東京都\\r',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:03:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=30561802> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:03:32 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:03:32 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:03:34 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:03:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=30561802>
+{'annual_income_max': '3000',
+ 'annual_income_min': '900',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 3, 34, 198274),
+ 'job_name': '16E011HM 上場企業での法人営業職\u3000全国可正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=30561802',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都中央区日本橋本町',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:03:45 [scrapy.extensions.logstats] INFO: Crawled 18 pages (at 4 pages/min), scraped 17 items (at 4 items/min)
+2019-10-24 12:03:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31744782> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:03:49 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:03:49 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:03:50 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:03:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31744782>
+{'annual_income_max': '600',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 3, 50, 87727),
+ 'job_name': '医療業界への法人向け営業正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31744782',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都豊島区西池袋',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:04:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31743108> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:04:06 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:04:06 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:04:07 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:04:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31743108>
+{'annual_income_max': '800',
+ 'annual_income_min': '500',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 4, 7, 497827),
+ 'job_name': '営業（海外）正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31743108',
+ 'longitude': '139.769017',
+ 'nearest_station': '神奈川県相模原市【相模原工場】\\r他海外子会社',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:04:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31991630> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:04:24 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:04:24 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:04:27 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:04:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31991630>
+{'annual_income_max': '500',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 4, 27, 525045),
+ 'job_name': '【JASDAQ上場】世界一を誇る振動装置メーカー\u3000営業ポジション（機械が好きな人は活躍できます） 正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31991630',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都港区',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:04:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31997963> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:04:38 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:04:38 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:04:39 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:04:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31997963>
+{'annual_income_max': '600',
+ 'annual_income_min': '300',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 4, 39, 444349),
+ 'job_name': '【東京】コンサルティング営業／転勤なし／大手企業正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31997963',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都港区高輪',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:04:45 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 4 pages/min), scraped 21 items (at 4 items/min)
+2019-10-24 12:04:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31997986> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:04:55 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:04:55 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:04:56 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:04:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31997986>
+{'annual_income_max': '500',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 4, 56, 345065),
+ 'job_name': '営業職・就活プランナー （東京／名古屋／大阪／福岡）正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31997986',
+ 'longitude': '139.769017',
+ 'nearest_station': '※新宿本社・名古屋・大阪・福岡いずれかでの勤務となります。',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:05:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31998008> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:05:11 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:05:11 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:05:14 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:05:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31998008>
+{'annual_income_max': '400',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 5, 14, 928188),
+ 'job_name': '【大阪市】 医薬品営業\u3000※老舗医薬品メーカー正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31998008',
+ 'longitude': '139.769017',
+ 'nearest_station': '大阪府大阪市中央区',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:05:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31997976> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:05:24 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:05:24 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:05:27 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:05:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31997976>
+{'annual_income_max': '352',
+ 'annual_income_min': '300',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 5, 27, 267091),
+ 'job_name': '【新卒・第二新卒歓迎】総合職（コンサルティング営業）～未経験可～正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31997976',
+ 'longitude': '139.769017',
+ 'nearest_station': '〒230-0051 \\r横浜市鶴見区鶴見中央5-4-10\\u3000ベ...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.10.28',
+ 'source': 'マイナビ'}
+2019-10-24 12:05:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31746465> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:05:32 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:05:32 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:05:34 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:05:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31746465>
+{'annual_income_max': '3000',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 5, 34, 230132),
+ 'job_name': '≪新規立ち上げ≫売上拡大してくれる営業マンを募集＠営業部長候補/40代活躍正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31746465',
+ 'longitude': '139.769017',
+ 'nearest_station': '渋谷区/代々木駅\\u3000徒歩４分',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:05:45 [scrapy.extensions.logstats] INFO: Crawled 26 pages (at 4 pages/min), scraped 25 items (at 4 items/min)
+2019-10-24 12:05:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31746692> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:05:48 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:05:49 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:05:50 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:05:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31746692>
+{'annual_income_max': '600',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 5, 50, 406478),
+ 'job_name': '昇給幅がすごい\u3000やりがいと給与が比例する営業のお仕事正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31746692',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京本社（東京都渋谷区）',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:06:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31743464> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:06:05 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:06:05 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:06:06 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:06:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31743464>
+{'annual_income_max': 0,
+ 'annual_income_min': 0,
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 6, 6, 791749),
+ 'job_name': '【IT営業】未経験から年収600万円稼げるチャンス～成長できる環境が整っています正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31743464',
+ 'longitude': '139.769017',
+ 'nearest_station': '・各線「新宿駅」より徒歩15分（新宿駅発の無料シャトルバスも',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:06:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31738293> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:06:22 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:06:22 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:06:23 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:06:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31738293>
+{'annual_income_max': '500',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 6, 23, 479757),
+ 'job_name': '成長中のWEB・モバイル企業での提案企画営業(課長候補としてご活躍いただきます)正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31738293',
+ 'longitude': '139.769017',
+ 'nearest_station': 'JR・私鉄・地下鉄各線「池袋駅」メトロポリタン口から直結\\r...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:06:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31746446> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:06:39 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:06:40 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:06:41 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:06:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31746446>
+{'annual_income_max': '600',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 6, 41, 269030),
+ 'job_name': '資格試験認知度を高めるための営業活動～あなたのポジティブさを評価します（紹介予定派遣希望の方も可）正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31746446',
+ 'longitude': '139.769017',
+ 'nearest_station': '有楽町駅\\u3000徒歩5分',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:06:45 [scrapy.extensions.logstats] INFO: Crawled 30 pages (at 4 pages/min), scraped 29 items (at 4 items/min)
+2019-10-24 12:06:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31778843> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:06:53 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:06:53 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:06:56 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:06:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31778843>
+{'annual_income_max': '386',
+ 'annual_income_min': '370',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 6, 56, 232227),
+ 'job_name': '【営業職】歯科医療業界のIT化を支えるお仕事正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31778843',
+ 'longitude': '139.769017',
+ 'nearest_station': '福井県福井市 ',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:07:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31738283> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:07:08 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:07:08 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:07:09 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:07:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31738283>
+{'annual_income_max': '450',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 7, 9, 667495),
+ 'job_name': '【ITスキル活かせます】成長中のWEB企業でのシステム開発営業＠残業少な目・年間休日125日正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31738283',
+ 'longitude': '139.769017',
+ 'nearest_station': 'JR・私鉄・地下鉄各線「池袋駅」メトロポリタン口から直結\\r...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:07:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31743730> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:07:24 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:07:24 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:07:25 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:07:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31743730>
+{'annual_income_max': '550',
+ 'annual_income_min': '250',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 7, 25, 905483),
+ 'job_name': '福利厚生プランナー＠17時退社・土日祝休み・半休制度あり正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31743730',
+ 'longitude': '139.769017',
+ 'nearest_station': '選べる勤務地（転勤なし）\\r※全国各地に支社があります！勤務...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:07:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31754051> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:07:34 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:07:34 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:07:37 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:07:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31754051>
+{'annual_income_max': '800',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 7, 37, 321080),
+ 'job_name': '営業コンサルタント《自社サービスの提案営業》正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31754051',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:07:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31996742> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:07:45 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:07:45 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:07:48 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:07:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31996742>
+{'annual_income_max': '250',
+ 'annual_income_min': '000',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 7, 48, 510019),
+ 'job_name': '【人材ソリューション営業】IT企業正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31996742',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京都渋谷区恵比寿西',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:07:48 [scrapy.extensions.logstats] INFO: Crawled 35 pages (at 5 pages/min), scraped 34 items (at 5 items/min)
+2019-10-24 12:07:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31753942> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:07:59 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:07:59 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:08:02 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:08:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31753942>
+{'annual_income_max': '400',
+ 'annual_income_min': '400',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 8, 2, 905806),
+ 'job_name': 'プロダクトセールス営業《2018年資金調達ランキング1位の業界大注目の企業》正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31753942',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:08:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31754450> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:08:17 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:08:17 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:08:18 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:08:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31754450>
+{'annual_income_max': '600',
+ 'annual_income_min': '350',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 8, 18, 551926),
+ 'job_name': '建材営業/オリジナルブランド企画・提案《まちづくり・空間プロデュースをしている企業UDS》正社員',
+ 'latitude': '35.6804',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31754450',
+ 'longitude': '139.769017',
+ 'nearest_station': '東京',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:08:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31759790> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:08:34 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:08:35 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:08:36 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E7%A4%BE%E5%90%8D%E9%9D%9E%E5%85%AC%E9%96%8B HTTP/1.1" 200 None
+2019-10-24 12:08:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31759790>
+{'annual_income_max': '800',
+ 'annual_income_min': '450',
+ 'company_name': '社名非公開',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 8, 36, 434399),
+ 'job_name': '【建築営業】《建設工事の受注営業担当》正社員',
+ 'latitude': '35.688811',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31759790',
+ 'longitude': '139.70183',
+ 'nearest_station': '東京、埼玉',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:08:45 [scrapy.extensions.logstats] INFO: Crawled 38 pages (at 3 pages/min), scraped 37 items (at 3 items/min)
+2019-10-24 12:08:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31993227> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:08:49 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:08:49 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:08:51 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E3%82%B5%E3%82%A4%E3%83%8D%E3%82%AA%E3%82%B9%E3%83%BB%E3%83%98%E3%83%AB%E3%82%B9%E5%90%88%E5%90%8C%E4%BC%9A%E7%A4%BE HTTP/1.1" 200 None
+2019-10-24 12:08:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31993227>
+{'annual_income_max': '550',
+ 'annual_income_min': '400',
+ 'company_name': 'サイネオス・ヘルス合同会社',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 8, 51, 450896),
+ 'job_name': '医療機器営業（業界未経験歓迎）契約社員',
+ 'latitude': '35.682564',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31993227',
+ 'longitude': '139.772676',
+ 'nearest_station': '東京、大阪、福岡、名古屋、仙台、他全国転勤可能者大歓迎',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:09:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31771933> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:09:06 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:09:06 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:09:07 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E6%97%A5%E4%B9%8B%E5%87%BA%E6%B0%B4%E9%81%93%E6%A9%9F%E5%99%A8%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE HTTP/1.1" 200 None
+2019-10-24 12:09:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31771933>
+{'annual_income_max': '500',
+ 'annual_income_min': '500',
+ 'company_name': '日之出水道機器株式会社',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 9, 7, 783951),
+ 'job_name': '【仙台】社会インフラを支える法人営業\u3000正社員',
+ 'latitude': '35.675833',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31771933',
+ 'longitude': '139.736882',
+ 'nearest_station': '&lt;東北第2営業所&gt;\\r宮城県仙台市若林区卸町3-...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:09:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31699674> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:09:13 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:09:13 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:09:16 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E4%B8%89%E5%B9%B8%E3%83%95%E3%82%A1%E3%82%B7%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%82%BA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE HTTP/1.1" 200 None
+2019-10-24 12:09:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31699674>
+{'annual_income_max': '600',
+ 'annual_income_min': '350',
+ 'company_name': '三幸ファシリティーズ株式会社',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 9, 16, 948287),
+ 'job_name': '法人営業【イトーキの100％子会社）正社員',
+ 'latitude': '35.689565',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31699674',
+ 'longitude': '139.768',
+ 'nearest_station': '本社\\r東京都千代田区内神田2-3-4 S-GATE大手町北...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:09:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31946197> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:09:30 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:09:30 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:09:31 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E3%82%A2%E3%82%B8%E3%82%A2%E5%90%88%E5%90%8C%E4%BC%9A%E7%A4%BE HTTP/1.1" 200 None
+2019-10-24 12:09:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31946197>
+{'annual_income_max': 0,
+ 'annual_income_min': 0,
+ 'company_name': 'アジア合同会社',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 9, 31, 949293),
+ 'job_name': 'IT機器の法人営業｜完全週休2日制（土・日・祝）正社員',
+ 'latitude': '34.068291',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31946197',
+ 'longitude': '134.552678',
+ 'nearest_station': '徳島事務所/徳島県徳島市南内町1-65-1\\u3000リバーフロント南',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:09:45 [scrapy.extensions.logstats] INFO: Crawled 42 pages (at 4 pages/min), scraped 41 items (at 4 items/min)
+2019-10-24 12:09:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31995115> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:09:46 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:09:46 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:09:50 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E3%82%B5%E3%83%BC%E3%82%B3%E3%83%A0%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE HTTP/1.1" 200 None
+2019-10-24 12:09:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31995115>
+{'annual_income_max': '900',
+ 'annual_income_min': '600',
+ 'company_name': 'サーコムジャパン株式会社',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 9, 50, 20057),
+ 'job_name': '法人営業\u3000※既存クライアント担当／営業ノルマのない環境です正社員',
+ 'latitude': '35.6221',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31995115',
+ 'longitude': '139.749984',
+ 'nearest_station': '東京都品川区東品川２－２－２０郵船ビル２１Ｆ（転勤無し）',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:10:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31820643> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:10:03 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:10:03 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:10:05 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E3%82%A2%E3%82%A4%E3%83%9F%E3%83%BC%EF%BC%88%E6%A0%AA%EF%BC%89 HTTP/1.1" 200 None
+2019-10-24 12:10:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31820643>
+{'annual_income_max': '3000',
+ 'annual_income_min': '214',
+ 'company_name': 'アイミー（株）',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 10, 5, 900368),
+ 'job_name': '正社員/新横浜駅徒歩/土日祝休み/年間休日126日/コンタクトの開発販売企業でのルートセールス正社員',
+ 'latitude': '35.506084',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31820643',
+ 'longitude': '139.615282',
+ 'nearest_station': '神奈川県横浜市港北区新横浜（新横浜駅より徒歩5分）',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:10:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31993197> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:10:16 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:10:16 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:10:19 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E3%83%9F%E3%83%8D%E3%83%99%E3%82%A2%E3%83%9F%E3%83%84%E3%83%9F%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE HTTP/1.1" 200 None
+2019-10-24 12:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31993197>
+{'annual_income_max': '650',
+ 'annual_income_min': '370',
+ 'company_name': 'ミネベアミツミ株式会社',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 10, 19, 538990),
+ 'job_name': '提案営業(インダストリアルデバイス) ＜東京本部＞正社員',
+ 'latitude': '36.31578',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31993197',
+ 'longitude': '138.52301',
+ 'nearest_station': '東京都港区三田3-5-27 住友不動産三田ツインビル西館11',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:10:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31995483> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:10:33 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:10:33 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:10:37 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E3%83%A4%E3%83%9E%E3%83%88%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE HTTP/1.1" 200 None
+2019-10-24 12:10:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31995483>
+{'annual_income_max': '450',
+ 'annual_income_min': '350',
+ 'company_name': 'ヤマトシステム開発株式会社',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 10, 37, 331190),
+ 'job_name': '【ヤマトグループ（「クロネコヤマト」でお馴染みのシステム会社です）】東京営業職正社員',
+ 'latitude': '35.671349',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31995483',
+ 'longitude': '139.819795',
+ 'nearest_station': '東京都江東区豊洲5-6-36',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:10:45 [scrapy.extensions.logstats] INFO: Crawled 46 pages (at 4 pages/min), scraped 45 items (at 4 items/min)
+2019-10-24 12:10:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31945988> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:10:49 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:10:49 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:10:51 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E6%97%A5%E6%9C%AC%E7%89%B9%E6%AE%8A%E7%AE%A1%E8%A3%BD%E4%BD%9C%E6%89%80 HTTP/1.1" 200 None
+2019-10-24 12:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31945988>
+{'annual_income_max': 0,
+ 'annual_income_min': 0,
+ 'company_name': '株式会社日本特殊管製作所',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 10, 51, 434741),
+ 'job_name': '総合職正社員',
+ 'latitude': '34.524533',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31945988',
+ 'longitude': '135.621125',
+ 'nearest_station': '■本社：大阪府富田林市西条町2丁目3625\\r■最寄り駅：「...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:11:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31615878> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:11:02 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:11:02 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:11:04 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%89%E3%83%AF%E3%83%B3%E3%82%B4 HTTP/1.1" 200 None
+2019-10-24 12:11:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31615878>
+{'annual_income_max': 0,
+ 'annual_income_min': 0,
+ 'company_name': '株式会社ドワンゴ',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 11, 4, 65941),
+ 'job_name': '【自社IP事業】コンテンツプロデューサー（正社員）正社員',
+ 'latitude': '35.66975',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31615878',
+ 'longitude': '139.768003',
+ 'nearest_station': '中央区銀座（都営浅草線 東銀座駅から徒歩1分、東京メトロ日比',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:11:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31946449> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:11:17 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:11:17 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:11:19 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%82%A2%E3%82%B9%E3%83%9E%E3%83%BC%E3%82%AF HTTP/1.1" 200 None
+2019-10-24 12:11:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31946449>
+{'annual_income_max': '500',
+ 'annual_income_min': '300',
+ 'company_name': '株式会社アスマーク',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 11, 19, 59684),
+ 'job_name': '【マーケティング課題を解決する法人営業】マーケティングリサーチ正社員',
+ 'latitude': '35.653933',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31946449',
+ 'longitude': '139.705984',
+ 'nearest_station': '東京本社／東京都 渋谷区 東１丁目 ３２－１２ 渋谷プロパテ',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:11:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31994500> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:11:27 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:11:27 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:11:29 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%82%AF%E3%83%BC%E3%82%B7%E3%83%BC HTTP/1.1" 200 None
+2019-10-24 12:11:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31994500>
+{'annual_income_max': '700',
+ 'annual_income_min': '400',
+ 'company_name': '株式会社クーシー',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 11, 29, 557356),
+ 'job_name': 'Web制作・Webサービス開発のコンサルティング営業 正社員',
+ 'latitude': '35.64945',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31994500',
+ 'longitude': '139.710398',
+ 'nearest_station': '東京都渋谷区東3-16-3 エフ・ニッセイ恵比寿ビル7F\\r...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:11:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://mynavi.agentsearch.jp/jobDetail/?jobId=31732858> (referer: https://mynavi.agentsearch.jp/jobList/)
+2019-10-24 12:11:44 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): www.geocoding.jp:443
+2019-10-24 12:11:44 [py.warnings] WARNING: /Users/tianxiaoyi/Envs/sales_search_engine/lib/python3.7/site-packages/urllib3/connectionpool.py:1004: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning,
+
+2019-10-24 12:11:45 [urllib3.connectionpool] DEBUG: https://www.geocoding.jp:443 "GET /?q=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%82%AA%E3%83%A0%E3%83%8B%E3%83%90%E3%82%B9 HTTP/1.1" 200 None
+2019-10-24 12:11:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://mynavi.agentsearch.jp/jobDetail/?jobId=31732858>
+{'annual_income_max': 0,
+ 'annual_income_min': 0,
+ 'company_name': '株式会社オムニバス',
+ 'create_data': datetime.datetime(2019, 10, 24, 12, 11, 45, 871921),
+ 'job_name': 'クレディセゾングループ企業でセールス・トレーダー職正社員',
+ 'latitude': '28.161767',
+ 'link_url': 'https://mynavi.agentsearch.jp/jobDetail/?jobId=31732858',
+ 'longitude': '145.028239',
+ 'nearest_station': '東京都目黒区\\r東急東横線・東京メトロ日比谷線\\u3000中目黒駅より...',
+ 'occupation': '営業',
+ 'published_time': '掲載開始日：2019.10.24終了予定日：2019.11.20',
+ 'source': 'マイナビ'}
+2019-10-24 12:11:45 [scrapy.extensions.logstats] INFO: Crawled 51 pages (at 5 pages/min), scraped 50 items (at 5 items/min)
+2019-10-24 12:11:45 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-10-24 12:11:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 60639,
+ 'downloader/request_count': 51,
+ 'downloader/request_method_count/GET': 50,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 524754,
+ 'downloader/response_count': 51,
+ 'downloader/response_status_count/200': 51,
+ 'elapsed_time_seconds': 720.193259,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 10, 24, 3, 11, 45, 877132),
+ 'item_scraped_count': 50,
+ 'log_count/DEBUG': 201,
+ 'log_count/INFO': 22,
+ 'log_count/WARNING': 51,
+ 'memusage/max': 76849152,
+ 'memusage/startup': 61988864,
+ 'request_depth_max': 1,
+ 'response_received_count': 51,
+ 'scheduler/dequeued': 51,
+ 'scheduler/dequeued/memory': 51,
+ 'scheduler/enqueued': 51,
+ 'scheduler/enqueued/memory': 51,
+ 'start_time': datetime.datetime(2019, 10, 24, 2, 59, 45, 683873)}
+2019-10-24 12:11:45 [scrapy.core.engine] INFO: Spider closed (finished)

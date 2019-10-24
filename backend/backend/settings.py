@@ -148,8 +148,8 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle' # tokenのセッションで判断
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '30/minute',
-        'user': '40/minute'
+        'anon': '50/minute',
+        'user': '50/minute'
     },
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }

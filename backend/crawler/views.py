@@ -26,9 +26,10 @@ class CrawlerDataViewSet(CacheResponseMixin, mixins.ListModelMixin, mixins.Destr
     queryset = CrawlerData.objects.all()
     serializer_class = CrawlerDataSerializer
     pagination_class = CrawlerDataPagination
-    filter_backends = (DjangoFilterBackend, filters.SearchFilter)
+    filter_backends = (DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
     filter_class = CrawlerDataFilter
     search_fields = ['company_name']
+    OrderingFilter = ["annual_income_min", "annual_income_max"]
 
 
 class CrawlerMapDataViewSet(CacheResponseMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
