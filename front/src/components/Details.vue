@@ -12,7 +12,27 @@
             <el-tab-pane label="ディフォルト" name="default">ディフォルト</el-tab-pane>
             <el-tab-pane label="年収順(降順)" name="first">年収順(降順)</el-tab-pane>
             <el-tab-pane label="年収順(昇順)" name="last">年収順(昇順)</el-tab-pane>
+            <el-tab-pane label="その他" name="out" disabled>その他</el-tab-pane>
         </el-tabs>
+        <el-row :gutter="20">
+            <div class="demo-input-suffix">
+                <el-col :span="6">
+                    <el-input
+                        placeholder="最低提示年収"
+                        suffix-icon="el-icon-date"
+                        v-model="min">
+                    </el-input>
+                </el-col>
+                <el-col :span="6">
+                    <el-input
+                        placeholder="最高提示年収"
+                        suffix-icon="el-icon-date"
+                        v-model="max">
+                    </el-input>
+                </el-col>
+                <el-button type="primary" plain @click="handleClickFilter">フィルタ</el-button>
+            </div>
+        </el-row>
         <div v-for="(item, key) in testData" :key="item.id" class="text item">
             <el-row :gutter="12" class="grid-content">
                 <el-col :span="23">
@@ -77,9 +97,12 @@ export default class Details extends Vue{
     @Provide() activeName: string =  'default';
     @Provide() testData:any[] = [];
     @Provide() sortData:string = '';
+    @Provide() min:Number = 0;
+    @Provide() max:Number = 0;
+    @Provide() dialogCompanyName:string = "";
+    @Provide() companyInfoLength:Number = 0;
     mounted(){
         this.testData = this.GetData;
-
     }
     @Watch("sortData")
     onSortDataChanged(newText: string, oldText: string){
@@ -89,6 +112,8 @@ export default class Details extends Vue{
            this.handleSortDefault()
         }else if(newText === "年収順(昇順)"){
             this.handleSortLast()
+        }else {
+            this.handleFilter()
         }
     }
 
@@ -104,19 +129,36 @@ export default class Details extends Vue{
     handleSortFirst():void{
         (this as any).$axios.get(`http://127.0.0.1:8000/dates/?annual_income_max=&annual_income_min=&company_name=${this.searchVal}&ordering=-annual_income_max&source=${this.companyName}`)
             .then((res:any)=>{
+           this.min = 0;
+           this.max = 0;
            this.testData = res.data.results;
         })
     }
     handleSortLast():void{
         (this as any).$axios.get(`http://127.0.0.1:8000/dates/?annual_income_max=&annual_income_min=&company_name=${this.searchVal}&ordering=annual_income_max&source=${this.companyName}`)
             .then((res:any)=>{
-            this.testData = res.data.results;
+                this.min = 0;
+                this.max = 0;
+                this.testData = res.data.results;
         })
     }
     handleSortDefault():void{
-        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?company_name=${this.searchVal}&source=${this.companyName}&annual_income_min=&annual_income_max=`)
+        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?company_name=${this.searchVal}&source=${this.companyName}`)
             .then((res:any)=>{
+                this.min = 0;
+                this.max = 0;
+                this.testData = res.data.results;
+        })
+    }
+    handleClickFilter():void{
+        this.activeName = "out";
+        this.sortData = "out"
+    }
+    handleFilter():void{
+        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?company_name=${this.searchVal}&source=${this.companyName}&annual_income_min=${this.min}&annual_income_max=${this.max}`).then((res:any)=>{
             this.testData = res.data.results;
+        }).catch((err:any)=>{
+            console.log(err);
         })
     }
 };

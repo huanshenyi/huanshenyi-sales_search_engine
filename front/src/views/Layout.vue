@@ -32,6 +32,11 @@
       </el-main>
       <el-footer>
         <div class="footer">
+          <div class="container">
+            <div class="footer-main">
+              <h4>テスト</h4>
+            </div>
+          </div>
         </div>
       </el-footer>
     </el-container>
@@ -115,12 +120,21 @@ export default class Home extends Vue {
       }
     }
     .footer{
+      background-color: #f7fbfd;
       width: 100%;
       padding: 40px 150px;
       box-sizing: border-box;
-      height: 340px;
-      bottom: 0;
+      height: 100px;
+      .container{
+        box-sizing: border-box;
+        width: auto;
+      }
+      .footer-main{
+        font-size: 0;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 110px;
+      }
     }
   }
-
 </style>

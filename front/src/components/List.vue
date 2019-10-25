@@ -8,6 +8,27 @@
                         <i class="el-icon-search" @click="handleSearch">検索</i>
                     </el-button>
                 </div>
+                <div class="search-box">
+                    <el-row :gutter="20">
+                        <div class="demo-input-suffix">
+                            <el-col :span="3">
+                                <el-input
+                                        placeholder="最低提示年収"
+                                        suffix-icon="el-icon-date"
+                                        v-model="min">
+                                </el-input>
+                            </el-col>
+                            <el-col :span="3">
+                                <el-input
+                                        placeholder="最高提示年収"
+                                        suffix-icon="el-icon-date"
+                                        v-model="max">
+                                </el-input>
+                            </el-col>
+                            <el-button type="primary" plain @click="handleFilter">フィルタ</el-button>
+                        </div>
+                    </el-row>
+                </div>
                 <div class="content-box">
                     <el-row :gutter="20">
                         <el-col :span="6">
@@ -107,6 +128,7 @@
 import { Component, Vue, Provide} from "vue-property-decorator"
 import Layout from "@/views/Layout.vue"
 import Details from "@/components/Details.vue"
+import any = jasmine.any;
 
 @Component({
     components:{
@@ -125,6 +147,8 @@ export default class List extends Vue{
     @Provide() detailsData:any[] = [];
     @Provide() detailsCompanyName:string = '';
     @Provide() detailsImages:string = "";
+    @Provide() min:any = null;
+    @Provide() max:any = null;
     created(){
         this.loading = false;
         this.searchVal = (this as any).$route.query.searchVal ? (this as any).$route.query.searchVal : "";
@@ -137,7 +161,15 @@ export default class List extends Vue{
             this.searchData = res.data.results
         })
     }
-
+    handleFilter():void{
+        (this as any).$axios.get(`http://127.0.0.1:8000/dates/?company_name=${this.searchVal}&source=&annual_income_min=${this.min}&annual_income_max=${this.max}`)
+            .then((res:any)=>{
+                console.log(this.searchData);
+                console.log(res.data.results);
+                this.searchData = "";
+                this.searchData = res.data.results
+        })
+    }
     get GetDodaData(){
         for(let i =0;i<this.searchData.length;i++){
             if (this.searchData[i].source == "doda"){
@@ -162,14 +194,6 @@ export default class List extends Vue{
             }
         }
         return this.enData
-    }
-
-    handleClose(done:any) {
-        this.$confirm('閉じます？')
-            .then(_ => {
-                done();
-            })
-            .catch(_ => {});
     }
     handleEdit(name:string,data:any,img:string):void{
         this.detailsCompanyName = name;

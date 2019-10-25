@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c2078bf-25a9-4a99-b7f5-90eaeb16b3fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../front/src/api/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/src/api/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/crawler/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/crawler/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/crawler/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/crawler/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/crawler/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/crawler/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbs/crawler.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbs/crawler.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twistd.pid" beforeDir="false" afterPath="$PROJECT_DIR$/twistd.pid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/Contactt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/Contactt.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twistd.pid" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../front/src/components/Details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/Details.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/components/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/components/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/store.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,9 +174,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-51" />
-    <option name="y" value="-881" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="807" />
   </component>
@@ -344,15 +331,16 @@
       <workItem from="1571635694343" duration="11869000" />
       <workItem from="1571795780464" duration="1680000" />
       <workItem from="1571885815768" duration="1681000" />
-      <workItem from="1571906829624" duration="1801000" />
+      <workItem from="1571906829624" duration="2405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169780000" />
+    <option name="totallyTimeSpent" value="170384000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-51" y="-881" width="1440" height="807" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="807" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49747476" visible="true" weight="0.14091559" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
