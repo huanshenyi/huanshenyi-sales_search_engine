@@ -91,11 +91,11 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'students',
-#         'USER': 'root',
-#         'PASSWORD': 'root',
-#         'HOST': 'xxx.x.x.x',
-#         'OPTIONS': {'init_command': 'SET storage_engine=INNODB'}
+#         'NAME': 'crawler',
+#         'USER': 'admin',
+#         'PASSWORD': 'bellface1358',
+#         'HOST': 'companyinfo.clcauwcac9yg.ap-northeast-1.rds.amazonaws.com',
+#         'OPTIONS': {'init_command': 'SET default_storage_engine=INNODB'}
 #     }
 # }
 
