@@ -56,6 +56,7 @@
                             <el-col :xs="4" :sm="6" :md="8" :lg="13" :xl="19" class="bg-purple-light">
                                 <div class="content">
                                     <div style="padding-bottom: 10px">掲載時間: {{item.published_time}}</div>
+                                    <p style="padding-bottom: 10px">掲載先: {{item.source}}</p>
                                     <p style="padding-bottom: 10px">
                                         募集内容: <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>/{{item.occupation}}
                                     </p>

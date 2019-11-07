@@ -27,6 +27,11 @@ export default new Router({
       path: "/list",
       name: "list",
       component: () => import('./components/List.vue')
+    },
+    {
+      path: "/manysearchlist",
+      name: "manysearchlist",
+      component: () => import("./components/Manysearchlist.vue")
     }
   ]
 })

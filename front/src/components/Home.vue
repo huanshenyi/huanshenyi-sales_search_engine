@@ -1,11 +1,18 @@
 <template>
     <Layout>
         <div slot="container">
+            <many-data-details
+                    :dialogVisible="dialogVisible"
+                    @closeDialog="closeDialog"
+            ></many-data-details>
             <div class="home">
                 <div class="search-box">
                     <el-input size="small" v-model="searchVal" placeholder="企業名を入力して下さい"></el-input>
                     <el-button size="small" type="primary">
                         <i class="el-icon-search" @click="handleSearch">検索</i>
+                    </el-button>
+                    <el-button type="success" plain>
+                        <i class="el-icon-orange" @click="handleManySearch">複数検索</i>
                     </el-button>
                     現在総：{{this.count}}件
                 </div>
@@ -21,12 +28,15 @@
     import { getMapData } from "@/api/api"
     import Layout from "@/views/Layout.vue"
     import echarts from 'echarts'
+    import ManyDataDetails from "@/components/manyDataDetails.vue";
     @Component({
         components:{
-            Layout
+            Layout,
+            ManyDataDetails
         }
     })
     export default class Home extends Vue{
+        @Provide() dialogVisible:boolean = false;
         @Provide() searchVal:string = "";
         @Provide() count:number = 0;
         @Provide() crawlerData:any = [];
@@ -70,7 +80,14 @@
             }
             return res;
         }
-
+        //複数検索対応
+        handleManySearch(){
+            this.dialogVisible = true
+        }
+        //dialogを閉じる
+        closeDialog(){
+            this.dialogVisible = false;
+        }
         drawLine():void{
             this.myChart = echarts.init(this.$refs.myChart as HTMLCanvasElement);
             this.myChart.setOption({
@@ -312,5 +329,4 @@
              }
          }
     }
-
 </style>

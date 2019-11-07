@@ -53,7 +53,7 @@
                         <el-col :span="6"><div class="grid-content bg-purple">
                             <el-card class="box-card" v-if="GetMyNaviData.length > 0">
                                 <div slot="header" class="clearfix">
-                                    <span>マイナビ({{GetMyNaviData.length}}件)</span>
+                                    <span>マイナビ転職エージェントサーチ({{GetMyNaviData.length}}件)</span>
                                 </div>
                                 <div v-for="(item, key) in GetMyNaviData" :key="item.id" class="text item">
                                     <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>

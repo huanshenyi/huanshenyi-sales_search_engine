@@ -6,6 +6,7 @@
           <h2>ABOUT</h2>
           <h4 class="title">- how to use</h4>
           <p class="des">セールスの事前準備ツールです。</p>
+          <p>クローラー実行時に１分間5件のデータが増えます</p>
           <h4 class="title">- other</h4>
           <p class="des">個人の制作物であり所属する諸々の団体の製品とは一切関係ありません。</p>
         </div>
