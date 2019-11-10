@@ -56,7 +56,7 @@ export default class manyDataDetails extends Vue{
             companyNames.push(item.companyName);
         });
         companyNames.forEach((item,index)=>{
-           (this as any).$axios.get(`http://localhost:8000/dates/?company_name=${item}`).then((res:any)=>{
+           (this as any).$axios.get(`http://52.193.145.113:8000/dates/?company_name=${item}`).then((res:any)=>{
               this.resultList.push({key:item,results:res.data.results})
            })
         });

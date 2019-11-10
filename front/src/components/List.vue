@@ -38,7 +38,7 @@
                                         <span>DODA({{GetDodaData.length}}件)</span>
                                     </div>
                                     <div v-for="(item, key) in GetDodaData" :key="item.id" class="text item">
-                                        <a :href="item.link_url">{{item.job_name}}</a>
+                                        <a :href="item.link_url" target="_blank">{{item.job_name}}</a>
                                     </div>
                                     <el-button type="text" @click="handleEdit(
                                         'DODA',
@@ -56,7 +56,7 @@
                                     <span>マイナビ転職エージェントサーチ({{GetMyNaviData.length}}件)</span>
                                 </div>
                                 <div v-for="(item, key) in GetMyNaviData" :key="item.id" class="text item">
-                                    <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                                    <a :href="item.link_url" target="_blank">{{item.job_name}} ({{item.company_name}})</a>
                                 </div>
                                 <el-button type="text" @click="handleEdit(
                                 'マイナビ',
@@ -73,7 +73,7 @@
                                     <span>Green({{GetGreenData.length}}件)</span>
                                 </div>
                                 <div v-for="item in GetGreenData" :key="item.id" class="text item">
-                                    <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                                    <a :href="item.link_url" target="_blank">{{item.job_name}} ({{item.company_name}})</a>
                                 </div>
                                 <el-button type="text" @click="handleEdit(
                                 'Green',
@@ -90,7 +90,7 @@
                                     <span>エン転職({{GetEnData.length}}件)</span>
                                 </div>
                                 <div v-for="item in GetEnData" :key="item.id" class="text item">
-                                    <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                                    <a :href="item.link_url" target="_blank">{{item.job_name}} ({{item.company_name}})</a>
                                 </div>
                                 <el-button type="text" @click="handleEdit(
                                 'エン転職',
@@ -110,7 +110,7 @@
                                         <span>ネクストリクナビ({{Getnext_rikunabiData.length}}件)</span>
                                     </div>
                                     <div v-for="item in Getnext_rikunabiData" :key="item.id" class="text item">
-                                        <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                                        <a :href="item.link_url" target="_blank">{{item.job_name}} ({{item.company_name}})</a>
                                     </div>
                                     <el-button type="text" @click="handleEdit(
                                     'ネクストリクナビ',
@@ -128,7 +128,7 @@
                                     <span>type({{GetTypeData.length}}件)</span>
                                 </div>
                                 <div v-for="item in GetTypeData" :key="item.id" class="text item">
-                                    <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                                    <a :href="item.link_url" target="_blank">{{item.job_name}} ({{item.company_name}})</a>
                                 </div>
                                 <el-button type="text" @click="handleEdit(
                                     'Type',
@@ -145,7 +145,7 @@
                                     <span>wantedly({{GetWantedlyData.length}}件)</span>
                                 </div>
                                 <div v-for="item in GetWantedlyData" :key="item.id" class="text item">
-                                    <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>
+                                    <a :href="item.link_url" target="_blank">{{item.job_name}} ({{item.company_name}})</a>
                                 </div>
                                 <el-button type="text" @click="handleEdit(
                                     'wantedly',

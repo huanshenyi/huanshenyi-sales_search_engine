@@ -39,7 +39,7 @@
                     <el-card shadow="never">
                         <div slot="header" class="clearfix">
                             <span>{{item.company_name}}</span>
-                            <a :href="item.link_url">
+                            <a :href="item.link_url" target="_blank">
                                 <el-button style="float: right; padding: 3px 0" type="text">掲載元へ</el-button>
                             </a>
                         </div>
@@ -58,7 +58,7 @@
                                     <div style="padding-bottom: 10px">掲載時間: {{item.published_time}}</div>
                                     <p style="padding-bottom: 10px">掲載先: {{item.source}}</p>
                                     <p style="padding-bottom: 10px">
-                                        募集内容: <a :href="item.link_url">{{item.job_name}} ({{item.company_name}})</a>/{{item.occupation}}
+                                        募集内容: <a :href="item.link_url" target="_blank">{{item.job_name}} ({{item.company_name}})</a>/{{item.occupation}}
                                     </p>
                                     <div style="padding-bottom: 10px">
                                         提示年収: {{item.annual_income_min}}万円~{{item.annual_income_max}}万円
