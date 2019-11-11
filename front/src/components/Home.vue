@@ -11,10 +11,31 @@
                     <el-button size="small" type="primary">
                         <i class="el-icon-search" @click="handleSearch">検索</i>
                     </el-button>
-                    <el-button type="success" plain>
+                    <el-button size="small" type="success" plain>
                         <i class="el-icon-orange" @click="handleManySearch">複数検索</i>
                     </el-button>
                     現在総：{{this.count}}件
+                    <el-button  size="small" type="warning" plain style="float: right">
+                        <i class="el-icon-info" @click="showInfo = true">お知らせ</i>
+                    </el-button>
+                    <el-dialog
+                            title="改修中内容"
+                            :visible.sync="showInfo"
+                            width="30%"
+                            :show-close="false"
+                            center
+                    >
+                        <p>11/11</p>
+                        <p style="font-size: 20px">クローラー 追加中</p>
+                        <p>1.ハローワーク</p>
+                        <p>2.マイナビ転職</p>
+                        <p style="font-size: 20px">フロント修正</p>
+                        <p>1.検索すると添付のように縦に検索結果が出るんですが、横に並んだ方がいいのかな？</p>
+                        <p>2.検索結果の中の「詳細を表示」って何か出ます？何も出ず</p>
+                        <span slot="footer" class="dialog-footer">
+                            <el-button type="primary" @click="showInfo = false">閉じる</el-button>
+                        </span>
+                    </el-dialog>
                 </div>
                 <div ref="myChart" :style="{width: '100%', height: '700px'}">
                 </div>
@@ -37,6 +58,7 @@
     })
     export default class Home extends Vue{
         @Provide() dialogVisible:boolean = false;
+        @Provide() showInfo:boolean = false;
         @Provide() searchVal:string = "";
         @Provide() count:number = 0;
         @Provide() crawlerData:any = [];

@@ -1,35 +1,36 @@
 import axios from 'axios';
 const host = 'http://52.193.145.113:8000';
+const httphost = 'https://api.jobsearch.watch';
 const localHost = 'http://127.0.0.1:8000';
 
 // detailsページの降順
 export const sortFirst = (searchVal:string,companyName:string) => {
-    return axios.get(`${host}/dates/?annual_income_max=&annual_income_min=&company_name=${searchVal}&ordering=-annual_income_max&source=${companyName}`);
+    return axios.get(`${localHost}/dates/?annual_income_max=&annual_income_min=&company_name=${searchVal}&ordering=-annual_income_max&source=${companyName}`);
 };
 
 // detailsページの昇順
 export const sortLast = (searchVal:string,companyName:string)=>{
-    return axios.get(`${host}/dates/?annual_income_max=&annual_income_min=&company_name=${searchVal}&ordering=annual_income_max&source=${companyName}`)
+    return axios.get(`${localHost}/dates/?annual_income_max=&annual_income_min=&company_name=${searchVal}&ordering=annual_income_max&source=${companyName}`)
 };
 
 // detailsページのdefault並び
 export const sortDefault = (searchVal:string, companyName:string)=>{
-    return axios.get(`${host}/dates/?company_name=${searchVal}&source=${companyName}`)
+    return axios.get(`${localHost}/dates/?company_name=${searchVal}&source=${companyName}`)
 };
 
 // 最高提示年収の絞り
 export const Filter = (searchVal:string,companyName:string,min:Number,max:Number)=>{
-    return axios.get(`${host}/dates/?company_name=${searchVal}&source=${companyName}&annual_income_min=${min}&annual_income_max=${max}`)
+    return axios.get(`${localHost}/dates/?company_name=${searchVal}&source=${companyName}&annual_income_min=${min}&annual_income_max=${max}`)
 };
 
 // リストページにある検索input
 export const totalSearch = (searchVal:string)=>{
-    return axios.get(`${host}/dates/?company_name=${searchVal}`)
+    return axios.get(`${localHost}/dates/?company_name=${searchVal}`)
 };
 
 // mapのデータ取得
 export const getMapData = ()=>{
-    return axios.get(`${host}/mapdata/`)
+    return axios.get(`${localHost}/mapdata/`)
 };
 
 //クローラーサーバーの状態を取得

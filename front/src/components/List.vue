@@ -8,27 +8,6 @@
                         <i class="el-icon-search" @click="handleSearch">検索</i>
                     </el-button>
                 </div>
-                <div class="search-box">
-                    <el-row :gutter="20">
-                        <div class="demo-input-suffix">
-                            <el-col :span="3">
-                                <el-input
-                                        placeholder="最低提示年収"
-                                        suffix-icon="el-icon-date"
-                                        v-model="min">
-                                </el-input>
-                            </el-col>
-                            <el-col :span="3">
-                                <el-input
-                                        placeholder="最高提示年収"
-                                        suffix-icon="el-icon-date"
-                                        v-model="max">
-                                </el-input>
-                            </el-col>
-                            <el-button type="primary" plain @click="handleFilter" disabled>フィルタ</el-button>
-                        </div>
-                    </el-row>
-                </div>
                 <div class="content-box">
                     <el-row :gutter="20">
                         <el-col :span="6">
